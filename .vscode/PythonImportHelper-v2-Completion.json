@@ -1,5 +1,41 @@
 [
     {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "path-finding.100. SameTree.Solution",
+        "description": "path-finding.100. SameTree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\nclass Solution(object):\n    def isSameTree(self, p, q):\n        if(p is None and q is None):\n            return True\n        if(p is None or q is None):",
+        "detail": "path-finding.100. SameTree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "path-finding.100. SameTree.Solution",
+        "description": "path-finding.100. SameTree.Solution",
+        "peekOfCode": "class Solution(object):\n    def isSameTree(self, p, q):\n        if(p is None and q is None):\n            return True\n        if(p is None or q is None):\n            return False\n        if(p.val != q.val):\n            return False\n        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)\np = TreeNode(1, TreeNode(2), TreeNode(3))",
+        "detail": "path-finding.100. SameTree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "p",
+        "kind": 5,
+        "importPath": "path-finding.100. SameTree.Solution",
+        "description": "path-finding.100. SameTree.Solution",
+        "peekOfCode": "p = TreeNode(1, TreeNode(2), TreeNode(3))\nq = TreeNode(1, TreeNode(2), TreeNode(3))\nprint(str(Solution().isSameTree(p, q)))",
+        "detail": "path-finding.100. SameTree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "q",
+        "kind": 5,
+        "importPath": "path-finding.100. SameTree.Solution",
+        "description": "path-finding.100. SameTree.Solution",
+        "peekOfCode": "q = TreeNode(1, TreeNode(2), TreeNode(3))\nprint(str(Solution().isSameTree(p, q)))",
+        "detail": "path-finding.100. SameTree.Solution",
+        "documentation": {}
+    },
+    {
         "label": "ListNode",
         "kind": 6,
         "importPath": "recursion.206_ReverseLinkedList.Solution",
