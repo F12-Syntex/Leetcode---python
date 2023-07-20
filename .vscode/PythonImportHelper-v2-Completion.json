@@ -36,6 +36,78 @@
         "documentation": {}
     },
     {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "path-finding.110. Balanced Binary Tree.Solution",
+        "description": "path-finding.110. Balanced Binary Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\nclass Solution(object):\n    def isBalanced(self, root: TreeNode):\n        difference = abs(self.length(root.left) - self.length(root.right))\n        return difference <= 1 and self.isBalanced(root.left) and self.isBalanced(root.right)\n    def length(self, root: TreeNode):",
+        "detail": "path-finding.110. Balanced Binary Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "path-finding.110. Balanced Binary Tree.Solution",
+        "description": "path-finding.110. Balanced Binary Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def isBalanced(self, root: TreeNode):\n        difference = abs(self.length(root.left) - self.length(root.right))\n        return difference <= 1 and self.isBalanced(root.left) and self.isBalanced(root.right)\n    def length(self, root: TreeNode):\n        if(root is None):\n            return 0\n        return 1 + max(self.length(root.left), self.length(root.right))\nright = TreeNode(9)\nleft2 = TreeNode(3, TreeNode(4), TreeNode(4))",
+        "detail": "path-finding.110. Balanced Binary Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "right",
+        "kind": 5,
+        "importPath": "path-finding.110. Balanced Binary Tree.Solution",
+        "description": "path-finding.110. Balanced Binary Tree.Solution",
+        "peekOfCode": "right = TreeNode(9)\nleft2 = TreeNode(3, TreeNode(4), TreeNode(4))\nleft = TreeNode(2, left2, TreeNode(3))\ntree = TreeNode(1, left, right)\nsolution = Solution()  # Create an instance of the Solution class\nbalanced = solution.isBalanced(tree)  # Call the isBalanced method on the instance\nprint(balanced)",
+        "detail": "path-finding.110. Balanced Binary Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "left2",
+        "kind": 5,
+        "importPath": "path-finding.110. Balanced Binary Tree.Solution",
+        "description": "path-finding.110. Balanced Binary Tree.Solution",
+        "peekOfCode": "left2 = TreeNode(3, TreeNode(4), TreeNode(4))\nleft = TreeNode(2, left2, TreeNode(3))\ntree = TreeNode(1, left, right)\nsolution = Solution()  # Create an instance of the Solution class\nbalanced = solution.isBalanced(tree)  # Call the isBalanced method on the instance\nprint(balanced)",
+        "detail": "path-finding.110. Balanced Binary Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "left",
+        "kind": 5,
+        "importPath": "path-finding.110. Balanced Binary Tree.Solution",
+        "description": "path-finding.110. Balanced Binary Tree.Solution",
+        "peekOfCode": "left = TreeNode(2, left2, TreeNode(3))\ntree = TreeNode(1, left, right)\nsolution = Solution()  # Create an instance of the Solution class\nbalanced = solution.isBalanced(tree)  # Call the isBalanced method on the instance\nprint(balanced)",
+        "detail": "path-finding.110. Balanced Binary Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "tree",
+        "kind": 5,
+        "importPath": "path-finding.110. Balanced Binary Tree.Solution",
+        "description": "path-finding.110. Balanced Binary Tree.Solution",
+        "peekOfCode": "tree = TreeNode(1, left, right)\nsolution = Solution()  # Create an instance of the Solution class\nbalanced = solution.isBalanced(tree)  # Call the isBalanced method on the instance\nprint(balanced)",
+        "detail": "path-finding.110. Balanced Binary Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "solution",
+        "kind": 5,
+        "importPath": "path-finding.110. Balanced Binary Tree.Solution",
+        "description": "path-finding.110. Balanced Binary Tree.Solution",
+        "peekOfCode": "solution = Solution()  # Create an instance of the Solution class\nbalanced = solution.isBalanced(tree)  # Call the isBalanced method on the instance\nprint(balanced)",
+        "detail": "path-finding.110. Balanced Binary Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "balanced",
+        "kind": 5,
+        "importPath": "path-finding.110. Balanced Binary Tree.Solution",
+        "description": "path-finding.110. Balanced Binary Tree.Solution",
+        "peekOfCode": "balanced = solution.isBalanced(tree)  # Call the isBalanced method on the instance\nprint(balanced)",
+        "detail": "path-finding.110. Balanced Binary Tree.Solution",
+        "documentation": {}
+    },
+    {
         "label": "ListNode",
         "kind": 6,
         "importPath": "recursion.206_ReverseLinkedList.Solution",
