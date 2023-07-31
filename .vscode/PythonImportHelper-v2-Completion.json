@@ -1,5 +1,32 @@
 [
     {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "dp.338_Counting_Bits.Solution",
+        "description": "dp.338_Counting_Bits.Solution",
+        "peekOfCode": "class Solution(object):\n    def countBits(self, n):\n        binary = [0]\n        msb = 1\n        for i in range(1, n + 1):\n            mbv = (2 ** msb)\n            if mbv == i:\n                msb+=1\n                binary.append(1)\n                continue",
+        "detail": "dp.338_Counting_Bits.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sol",
+        "kind": 5,
+        "importPath": "dp.338_Counting_Bits.Solution",
+        "description": "dp.338_Counting_Bits.Solution",
+        "peekOfCode": "sol = Solution()\nprint(sol.countBits(5))",
+        "detail": "dp.338_Counting_Bits.Solution",
+        "documentation": {}
+    },
+    {
         "label": "TreeNode",
         "kind": 6,
         "importPath": "path-finding.100. SameTree.Solution",
