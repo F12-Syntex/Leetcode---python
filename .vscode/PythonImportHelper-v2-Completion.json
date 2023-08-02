@@ -11,6 +11,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "dp.1025_Divisor_Game.Solution",
+        "description": "dp.1025_Divisor_Game.Solution",
+        "peekOfCode": "class Solution(object):\n    def divisorGame(self, n):\n        return n % 2 == 0\nprint(str(Solution().divisorGame(3)))",
+        "detail": "dp.1025_Divisor_Game.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "dp.118_Pascals_Triangle.Solution",
         "description": "dp.118_Pascals_Triangle.Solution",
         "peekOfCode": "class Solution(object):\n    def generate(self, numRows):\n        dp = []\n        for i in range(1, numRows + 1):\n            array = []\n            for x in range(1, i+1):\n                if(x == 1 or x == i):\n                    array.append(1)\n                    continue\n                parent = dp[i - 2]",
