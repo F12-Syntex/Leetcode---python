@@ -13,7 +13,7 @@
         "kind": 6,
         "importPath": "dp.1025_Divisor_Game.Solution",
         "description": "dp.1025_Divisor_Game.Solution",
-        "peekOfCode": "class Solution(object):\n    def divisorGame(self, n):\n        return n % 2 == 0\nprint(str(Solution().divisorGame(3)))",
+        "peekOfCode": "class Solution(object):\n    def divisorGame(self, n):\n        return n&1 == 0\nprint(str(Solution().divisorGame(3)))",
         "detail": "dp.1025_Divisor_Game.Solution",
         "documentation": {}
     },
