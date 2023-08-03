@@ -54,6 +54,15 @@
         "documentation": {}
     },
     {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "dp.746_Min_Cost_Climbing_Stairs.Solution",
+        "description": "dp.746_Min_Cost_Climbing_Stairs.Solution",
+        "peekOfCode": "class Solution(object):\n    def minCostClimbingStairs(self, cost):\n        if len(cost) == 0:\n            return 0\n        if len(cost) == 1:\n            return cost[0]\n        if len(cost) == 2:\n            return min(cost[0], cost[1])\n        cost.append(0)\n        cost.append(0)",
+        "detail": "dp.746_Min_Cost_Climbing_Stairs.Solution",
+        "documentation": {}
+    },
+    {
         "label": "TreeNode",
         "kind": 6,
         "importPath": "path-finding.100. SameTree.Solution",
