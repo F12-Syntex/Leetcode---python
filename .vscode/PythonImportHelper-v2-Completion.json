@@ -56,6 +56,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "dp.121_Best_Time_to_Buy_and_Sell_Stock.Solution",
+        "description": "dp.121_Best_Time_to_Buy_and_Sell_Stock.Solution",
+        "peekOfCode": "class Solution(object):\n    def maxProfit(self, prices):\n        left_pointer = 0\n        right_pointer = 1\n        max_profit = 0\n        for i in range(1, len(prices)):\n            value = prices[i]\n            if value < prices[left_pointer]:\n                left_pointer = i\n            right_pointer+=1",
+        "detail": "dp.121_Best_Time_to_Buy_and_Sell_Stock.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "dp.338_Counting_Bits.Solution",
         "description": "dp.338_Counting_Bits.Solution",
         "peekOfCode": "class Solution(object):\n    def countBits(self, n):\n        binary = [0]\n        msb = 1\n        for i in range(1, n + 1):\n            mbv = (2 ** msb)\n            if mbv == i:\n                msb+=1\n                binary.append(1)\n                continue",
