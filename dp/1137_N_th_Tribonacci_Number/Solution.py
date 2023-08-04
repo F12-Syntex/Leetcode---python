@@ -4,7 +4,7 @@ class Solution(object):
         arr = [0, 1, 1]
 
         if len(arr) >= n:
-            return self.basecase(n)
+            return arr[n]
         
         for i in range(3, n):
             num = arr[0] + arr[1] + arr[2]
@@ -18,13 +18,6 @@ class Solution(object):
         for i in arr:
             sum+=i
         return sum
-    
-    # 0  1  2
-    #[0, 1, 1]
-    def basecase(self, n, arr):
-        if(n <= 0):
-            return 0
-        return arr[n]
         
     def leftShift(self, arr):
         for i in range(1, len(arr)):
