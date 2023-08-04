@@ -19,12 +19,12 @@ class Solution(object):
             sum+=i
         return sum
     
-    def basecase(self, n):
+    # 0  1  2
+    #[0, 1, 1]
+    def basecase(self, n, arr):
         if(n <= 0):
             return 0
-        if(n == 1):
-            return 1
-        return n-1
+        return arr[n]
         
     def leftShift(self, arr):
         for i in range(1, len(arr)):

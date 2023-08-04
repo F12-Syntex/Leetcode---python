@@ -47,6 +47,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "dp.119_Pascals_Triangle_II.Solution",
+        "description": "dp.119_Pascals_Triangle_II.Solution",
+        "peekOfCode": "class Solution(object):\n    def getRow(self, rowIndex):\n        arr = [0] * (rowIndex+1)\n        for row in range(rowIndex + 2):\n            startIndex = 0\n            endIndex = row-1\n            original = list(arr)\n            original[startIndex] = 1\n            original[endIndex] = 1\n            for col in range(row):",
+        "detail": "dp.119_Pascals_Triangle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "dp.338_Counting_Bits.Solution",
         "description": "dp.338_Counting_Bits.Solution",
         "peekOfCode": "class Solution(object):\n    def countBits(self, n):\n        binary = [0]\n        msb = 1\n        for i in range(1, n + 1):\n            mbv = (2 ** msb)\n            if mbv == i:\n                msb+=1\n                binary.append(1)\n                continue",
