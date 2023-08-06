@@ -92,6 +92,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "dp.392_Is_Subsequence.Solution",
+        "description": "dp.392_Is_Subsequence.Solution",
+        "peekOfCode": "class Solution(object):\n    def isSubsequence(self, string, text):\n        subsequence = list(string)\n        j = 0\n        for i in range(len(text)):\n            if(text[i] == subsequence[j]):\n                char = subsequence[j]\n                j+=1\n                if(len(subsequence) == j):\n                    return True",
+        "detail": "dp.392_Is_Subsequence.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "dp.746_Min_Cost_Climbing_Stairs.Solution",
         "description": "dp.746_Min_Cost_Climbing_Stairs.Solution",
         "peekOfCode": "class Solution(object):\n    def minCostClimbingStairs(self, cost):\n        if len(cost) == 0:\n            return 0\n        if len(cost) == 1:\n            return cost[0]\n        if len(cost) == 2:\n            return min(cost[0], cost[1])\n        cost.append(0)\n        cost.append(0)",
