@@ -120,7 +120,7 @@
         "kind": 6,
         "importPath": "dp.meduim.894_All_Possible_Full_Binary_Trees.Solution",
         "description": "dp.meduim.894_All_Possible_Full_Binary_Trees.Solution",
-        "peekOfCode": "class Solution(object):\n    def allPossibleFBT(self, n):\n        cache = {\n            0 : [],\n            1 : [TreeNode()]\n        }\n        def explore(n):\n            if n in cache:\n                return cache[n]\n            solutions = []",
+        "peekOfCode": "class Solution(object):\n    def allPossibleFBT(self, n):\n        #remember prev calculations\n        cache = {\n            0 : [],\n            1 : [TreeNode()]\n        }\n        #explore a given noumber of nodes\n        def explore(n):\n            #no full binary trees can be produced with an even number of nodes",
         "detail": "dp.meduim.894_All_Possible_Full_Binary_Trees.Solution",
         "documentation": {}
     },
