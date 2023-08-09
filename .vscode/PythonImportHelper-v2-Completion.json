@@ -19,10 +19,10 @@
     {
         "label": "Solution",
         "kind": 6,
-        "importPath": "arrays_and_hashing.meduim.238. Product of Array Except Self.Solution",
-        "description": "arrays_and_hashing.meduim.238. Product of Array Except Self.Solution",
+        "importPath": "arrays_and_hashing.meduim.238_Product_of_Array_Except_Self.Solution",
+        "description": "arrays_and_hashing.meduim.238_Product_of_Array_Except_Self.Solution",
         "peekOfCode": "class Solution(object):\n    def productExceptSelf(self, nums):\n        answer = [0] * len(nums)\n        sum = 1\n        zeroIndex = -1\n        for i in range(len(nums)):\n            value = nums[i]\n            if value == 0:\n                if zeroIndex != -1:\n                    return answer",
-        "detail": "arrays_and_hashing.meduim.238. Product of Array Except Self.Solution",
+        "detail": "arrays_and_hashing.meduim.238_Product_of_Array_Except_Self.Solution",
         "documentation": {}
     },
     {
@@ -32,6 +32,24 @@
         "description": "arrays_and_hashing.meduim.347_Top_K_Frequent_Elements.Solution",
         "peekOfCode": "class Solution(object):\n    def topKFrequent(self, nums, k):\n        topMap = [[] for _ in range(len(nums) + 1)]\n        map = self.mapify(nums)\n        for key in map:\n            value = map[key]\n            topMap[value].append(key)\n        j = 0\n        topK = [[] for _ in range(k)]\n        for i in range(len(topMap) - 1, -1, -1):",
         "detail": "arrays_and_hashing.meduim.347_Top_K_Frequent_Elements.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "arrays_and_hashing.meduim.36_Valid_Sudoku.Solution",
+        "description": "arrays_and_hashing.meduim.36_Valid_Sudoku.Solution",
+        "peekOfCode": "class Solution(object):\n    def isValidSudoku(self, board):\n        for rowIndex in range(len(board)):\n            row = board[rowIndex]\n            for colIndex in range(len(row)):\n                if not self.verify(board, rowIndex, colIndex):\n                    return False\n        return True\n    def verify(self, board, rowIndex, colIndex):\n        valid = True",
+        "detail": "arrays_and_hashing.meduim.36_Valid_Sudoku.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "board",
+        "kind": 5,
+        "importPath": "arrays_and_hashing.meduim.36_Valid_Sudoku.Solution",
+        "description": "arrays_and_hashing.meduim.36_Valid_Sudoku.Solution",
+        "peekOfCode": "board = [[\"8\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"]\n        ,[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"]\n        ,[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"]\n        ,[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"]\n        ,[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"]\n        ,[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"]\n        ,[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"]\n        ,[\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"]\n        ,[\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]]\nprint(Solution().isValidSudoku(board))",
+        "detail": "arrays_and_hashing.meduim.36_Valid_Sudoku.Solution",
         "documentation": {}
     },
     {
