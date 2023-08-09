@@ -19,6 +19,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "arrays_and_hashing.meduim.347_Top_K_Frequent_Elements.Solution",
+        "description": "arrays_and_hashing.meduim.347_Top_K_Frequent_Elements.Solution",
+        "peekOfCode": "class Solution(object):\n    def topKFrequent(self, nums, k):\n        topMap = [[] for _ in range(len(nums) + 1)]\n        map = self.mapify(nums)\n        for key in map:\n            value = map[key]\n            topMap[value].append(key)\n        j = 0\n        topK = [[] for _ in range(k)]\n        for i in range(len(topMap) - 1, -1, -1):",
+        "detail": "arrays_and_hashing.meduim.347_Top_K_Frequent_Elements.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "dp.easy.1025_Divisor_Game.Solution",
         "description": "dp.easy.1025_Divisor_Game.Solution",
         "peekOfCode": "class Solution(object):\n    def divisorGame(self, n):\n        return n&1 == 0\nprint(str(Solution().divisorGame(3)))",
