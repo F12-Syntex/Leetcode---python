@@ -19,6 +19,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "arrays_and_hashing.meduim.238. Product of Array Except Self.Solution",
+        "description": "arrays_and_hashing.meduim.238. Product of Array Except Self.Solution",
+        "peekOfCode": "class Solution(object):\n    def productExceptSelf(self, nums):\n        answer = [0] * len(nums)\n        sum = 1\n        zeroIndex = -1\n        for i in range(len(nums)):\n            value = nums[i]\n            if value == 0:\n                if zeroIndex != -1:\n                    return answer",
+        "detail": "arrays_and_hashing.meduim.238. Product of Array Except Self.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "arrays_and_hashing.meduim.347_Top_K_Frequent_Elements.Solution",
         "description": "arrays_and_hashing.meduim.347_Top_K_Frequent_Elements.Solution",
         "peekOfCode": "class Solution(object):\n    def topKFrequent(self, nums, k):\n        topMap = [[] for _ in range(len(nums) + 1)]\n        map = self.mapify(nums)\n        for key in map:\n            value = map[key]\n            topMap[value].append(key)\n        j = 0\n        topK = [[] for _ in range(k)]\n        for i in range(len(topMap) - 1, -1, -1):",
