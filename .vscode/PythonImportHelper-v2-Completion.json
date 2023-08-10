@@ -330,5 +330,14 @@
         "peekOfCode": "solution = Solution() \nsolution.print(solution.reverseList(node))",
         "detail": "recursion.206_ReverseLinkedList.Solution",
         "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "two_pointers.easy.125_Valid_Palindrome.Solution",
+        "description": "two_pointers.easy.125_Valid_Palindrome.Solution",
+        "peekOfCode": "class Solution(object):\n    def isPalindrome(self, s):\n        text = s.lower()\n        length = len(text) \n        leftPointer = 0\n        rightPointer = length - 1\n        while leftPointer < rightPointer:\n            while (leftPointer < rightPointer) and not (text[leftPointer].isdigit() or text[leftPointer].isalpha()):\n                leftPointer += 1\n            while (leftPointer < rightPointer) and not (text[rightPointer].isdigit() or text[rightPointer].isalpha()):",
+        "detail": "two_pointers.easy.125_Valid_Palindrome.Solution",
+        "documentation": {}
     }
 ]
