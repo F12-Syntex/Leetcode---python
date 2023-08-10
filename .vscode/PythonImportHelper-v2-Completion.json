@@ -343,6 +343,24 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "two_pointers.meduim.11. Container With Most Water.Solution",
+        "description": "two_pointers.meduim.11. Container With Most Water.Solution",
+        "peekOfCode": "class Solution(object):\n    def maxArea(self, walls):\n        l, r = 0, len(walls) - 1\n        maxArea = 0\n        while l < r:\n            area = min(walls[l], walls[r]) * (r - l)\n            maxArea = area if area > maxArea else maxArea\n            if(walls[l] < walls[r]):\n                l+=1\n            else:",
+        "detail": "two_pointers.meduim.11. Container With Most Water.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "arr",
+        "kind": 5,
+        "importPath": "two_pointers.meduim.11. Container With Most Water.Solution",
+        "description": "two_pointers.meduim.11. Container With Most Water.Solution",
+        "peekOfCode": "arr = [1,1]\nprint(Solution().maxArea(arr))",
+        "detail": "two_pointers.meduim.11. Container With Most Water.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "two_pointers.meduim.15. 3Sum.Solution",
         "description": "two_pointers.meduim.15. 3Sum.Solution",
         "peekOfCode": "class Solution(object):\n    def threeSum(self, nums):\n        sums = []\n        numbers = list(nums)\n        numbers.sort()\n        for index, number in enumerate(numbers):\n            if index > 0 and number == numbers[index - 1]:\n                continue\n            l, r = index + 1, len(numbers) - 1\n            while l < r:",
