@@ -343,6 +343,24 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "two_pointers.meduim.15. 3Sum.Solution",
+        "description": "two_pointers.meduim.15. 3Sum.Solution",
+        "peekOfCode": "class Solution(object):\n    def threeSum(self, nums):\n        sums = []\n        numbers = list(nums)\n        numbers.sort()\n        for index, number in enumerate(numbers):\n            if index > 0 and number == numbers[index - 1]:\n                continue\n            l, r = index + 1, len(numbers) - 1\n            while l < r:",
+        "detail": "two_pointers.meduim.15. 3Sum.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "arr",
+        "kind": 5,
+        "importPath": "two_pointers.meduim.15. 3Sum.Solution",
+        "description": "two_pointers.meduim.15. 3Sum.Solution",
+        "peekOfCode": "arr = [-1,0,1,2,-1,-4]\nprint(Solution().threeSum(arr))",
+        "detail": "two_pointers.meduim.15. 3Sum.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "two_pointers.meduim.167_Two_Sum_II_Input_Array_Is_Sorted.Solution",
         "description": "two_pointers.meduim.167_Two_Sum_II_Input_Array_Is_Sorted.Solution",
         "peekOfCode": "class Solution(object):\n    def twoSum(self, numbers, target):\n        rPointer = len(numbers) - 1\n        lPointer = 0\n        while lPointer < rPointer:\n            sum = numbers[lPointer] + numbers[rPointer]\n            if sum == target:\n                return [lPointer + 1, rPointer + 1]\n            if sum < target:\n                lPointer+=1",
