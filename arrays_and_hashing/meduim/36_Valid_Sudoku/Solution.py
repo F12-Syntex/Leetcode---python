@@ -19,13 +19,22 @@ class Solution(object):
             valid = valid and self.verifyBlock(board, rowIndex, colIndex)
 
         return valid
+        
+    def has_duplicates(arr):
+        checker = 0
+        for char in arr:
+            if char == '.':
+                continue
+            char_code = ord(char)
+            if (checker & (1 << char_code)) > 0:
+                return True
+            checker |= (1 << char_code)
+        return False
     
     def verifyHorizontal(self, board, rowIndex, colIndex):
         if(rowIndex > 0):
             return True
-        row = board[colIndex]
-        row = [x for x in row if x != '.']
-        return len(row) == len(set(row))
+        return not self.has_duplicates(board[colIndex])
 
     def verifyVertical(self, board, rowIndex, colIndex):
         col = []
@@ -33,13 +42,11 @@ class Solution(object):
             return True
         
         for i in board:
-            item = i[rowIndex]
-            if(item != '.'):
-                col.append(i[rowIndex])
-        return len(col) == len(set(col))
+            col.append(i[rowIndex])
+        return not self.has_duplicates(col)
     
     def verifyBlock(self, board, rowIndex, colIndex):
-        block = [""] * 9
+        block = [''] * 9
 
         blockIndexRowStart = 3 * ((rowIndex % 3))
         blockIndexColStart = 3 * ((colIndex % 3))
@@ -56,18 +63,8 @@ class Solution(object):
                 block[index] = board[i][j]
                 index+=1
 
-        block = [x for x in block if x != '.']  
+        return not self.has_duplicates(block)
 
-        return len(block) == len(set(block))
-
-board = [["8","3",".",".","7",".",".",".","."]
-        ,["6",".",".","1","9","5",".",".","."]
-        ,[".","9","8",".",".",".",".","6","."]
-        ,["8",".",".",".","6",".",".",".","3"]
-        ,["4",".",".","8",".","3",".",".","1"]
-        ,["7",".",".",".","2",".",".",".","6"]
-        ,[".","6",".",".",".",".","2","8","."]
-        ,[".",".",".","4","1","9",".",".","5"]
-        ,[".",".",".",".","8",".",".","7","9"]]
+board = [["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
 
 print(Solution().isValidSudoku(board))
