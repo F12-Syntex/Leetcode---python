@@ -339,5 +339,23 @@
         "peekOfCode": "class Solution(object):\n    def isPalindrome(self, s):\n        text = s.lower()\n        length = len(text) \n        leftPointer = 0\n        rightPointer = length - 1\n        while leftPointer < rightPointer:\n            while (leftPointer < rightPointer) and not (text[leftPointer].isdigit() or text[leftPointer].isalpha()):\n                leftPointer += 1\n            while (leftPointer < rightPointer) and not (text[rightPointer].isdigit() or text[rightPointer].isalpha()):",
         "detail": "two_pointers.easy.125_Valid_Palindrome.Solution",
         "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "two_pointers.meduim.167_Two_Sum_II_Input_Array_Is_Sorted.Solution",
+        "description": "two_pointers.meduim.167_Two_Sum_II_Input_Array_Is_Sorted.Solution",
+        "peekOfCode": "class Solution(object):\n    def twoSum(self, numbers, target):\n        rPointer = len(numbers) - 1\n        lPointer = 0\n        while lPointer < rPointer:\n            sum = numbers[lPointer] + numbers[rPointer]\n            if sum == target:\n                return [lPointer + 1, rPointer + 1]\n            if sum < target:\n                lPointer+=1",
+        "detail": "two_pointers.meduim.167_Two_Sum_II_Input_Array_Is_Sorted.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "arr",
+        "kind": 5,
+        "importPath": "two_pointers.meduim.167_Two_Sum_II_Input_Array_Is_Sorted.Solution",
+        "description": "two_pointers.meduim.167_Two_Sum_II_Input_Array_Is_Sorted.Solution",
+        "peekOfCode": "arr = [1,2,3,4,5]\nprint(Solution().twoSum(arr, 5))",
+        "detail": "two_pointers.meduim.167_Two_Sum_II_Input_Array_Is_Sorted.Solution",
+        "documentation": {}
     }
 ]
