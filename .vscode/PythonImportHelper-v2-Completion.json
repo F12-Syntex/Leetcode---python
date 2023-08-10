@@ -21,7 +21,7 @@
         "kind": 6,
         "importPath": "arrays_and_hashing.meduim.128_Longest_Consecutive_Sequence.Solution",
         "description": "arrays_and_hashing.meduim.128_Longest_Consecutive_Sequence.Solution",
-        "peekOfCode": "class Solution(object):\n    def longestConsecutive(self, nums):\n        return -1\nprint(Solution().longestConsecutive([100,4,200,1,3,2]))",
+        "peekOfCode": "class Solution(object):\n    def longestConsecutive(self, nums):\n        hashset, maximum = set(nums), 0\n        for i in hashset:\n            if i-1 not in hashset:\n                sequence = 1\n                while (i+sequence) in hashset:\n                    sequence += 1\n                maximum = max(maximum, sequence)\n        return maximum",
         "detail": "arrays_and_hashing.meduim.128_Longest_Consecutive_Sequence.Solution",
         "documentation": {}
     },
