@@ -343,6 +343,24 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "two_pointers.hard.42_Trapping_Rain_Water.Solution",
+        "description": "two_pointers.hard.42_Trapping_Rain_Water.Solution",
+        "peekOfCode": "class Solution(object):\n    def trap(self, height):\n        return -1\narr = [0,1,0,2,1,0,1,3,2,1,2,1]\nprint(Solution().trap(arr))",
+        "detail": "two_pointers.hard.42_Trapping_Rain_Water.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "arr",
+        "kind": 5,
+        "importPath": "two_pointers.hard.42_Trapping_Rain_Water.Solution",
+        "description": "two_pointers.hard.42_Trapping_Rain_Water.Solution",
+        "peekOfCode": "arr = [0,1,0,2,1,0,1,3,2,1,2,1]\nprint(Solution().trap(arr))",
+        "detail": "two_pointers.hard.42_Trapping_Rain_Water.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "two_pointers.meduim.11. Container With Most Water.Solution",
         "description": "two_pointers.meduim.11. Container With Most Water.Solution",
         "peekOfCode": "class Solution(object):\n    def maxArea(self, walls):\n        l, r = 0, len(walls) - 1\n        maxArea = 0\n        while l < r:\n            area = min(walls[l], walls[r]) * (r - l)\n            maxArea = area if area > maxArea else maxArea\n            if(walls[l] < walls[r]):\n                l+=1\n            else:",
