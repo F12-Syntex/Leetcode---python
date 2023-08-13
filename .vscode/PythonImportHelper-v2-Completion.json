@@ -345,7 +345,7 @@
         "kind": 6,
         "importPath": "two_pointers.hard.42_Trapping_Rain_Water.Solution",
         "description": "two_pointers.hard.42_Trapping_Rain_Water.Solution",
-        "peekOfCode": "class Solution(object):\n    def trap(self, height):\n        return -1\narr = [0,1,0,2,1,0,1,3,2,1,2,1]\nprint(Solution().trap(arr))",
+        "peekOfCode": "class Solution(object):\n    def trap(self, height):\n        length = len(height)\n        l, r, level = 0, length - 1, 0\n        maxL, maxR = height[l], height[r]\n        while l < r:\n            waterLevel = 0\n            if maxL < maxR:\n                l += 1\n                waterLevel = maxL - height[l]",
         "detail": "two_pointers.hard.42_Trapping_Rain_Water.Solution",
         "documentation": {}
     },
