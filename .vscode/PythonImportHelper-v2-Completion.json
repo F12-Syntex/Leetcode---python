@@ -17,6 +17,14 @@
         "documentation": {}
     },
     {
+        "label": "deque",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
         "label": "Solution",
         "kind": 6,
         "importPath": "arrays_and_hashing.meduim.128_Longest_Consecutive_Sequence.Solution",
@@ -329,6 +337,15 @@
         "description": "recursion.206_ReverseLinkedList.Solution",
         "peekOfCode": "solution = Solution() \nsolution.print(solution.reverseList(node))",
         "detail": "recursion.206_ReverseLinkedList.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "stacks.easy.20. Valid Parentheses.Solution",
+        "description": "stacks.easy.20. Valid Parentheses.Solution",
+        "peekOfCode": "class Solution(object):\n    def isValid1(self, s):\n        stack = []\n        closed = {  ')' : '(',\n                    '}' : '{',\n                    ']' : '['\n                }\n        for i in s:\n            if i in closed:\n                if stack[-1] == closed[i] and stack:",
+        "detail": "stacks.easy.20. Valid Parentheses.Solution",
         "documentation": {}
     },
     {
