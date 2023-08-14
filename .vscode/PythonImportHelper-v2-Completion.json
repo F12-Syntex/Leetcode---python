@@ -349,6 +349,15 @@
         "documentation": {}
     },
     {
+        "label": "MinStack",
+        "kind": 6,
+        "importPath": "stacks.meduim.155_Min_Stack.Solution",
+        "description": "stacks.meduim.155_Min_Stack.Solution",
+        "peekOfCode": "class MinStack(object):\n    def __init__(self):\n        pass\n    def push(self, val):\n        \"\"\"\n        :type val: int\n        :rtype: None\n        \"\"\"\n    def pop(self):\n        \"\"\"",
+        "detail": "stacks.meduim.155_Min_Stack.Solution",
+        "documentation": {}
+    },
+    {
         "label": "Solution",
         "kind": 6,
         "importPath": "two_pointers.easy.125_Valid_Palindrome.Solution",
