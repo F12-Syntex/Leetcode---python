@@ -405,6 +405,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "stacks.meduim.739_Daily_Temperatures.Solution",
+        "description": "stacks.meduim.739_Daily_Temperatures.Solution",
+        "peekOfCode": "class Solution(object):\n    def dailyTemperatures(self, temperatures):\n        result = [0] * len(temperatures) \n        stack = [] #indexes\n        for index, temp in enumerate(temperatures):\n            while stack and temp > temperatures[stack[-1]]:\n                poppedIndex = stack.pop()\n                result[poppedIndex] = (index - poppedIndex)\n            stack.append(index)\n        return result",
+        "detail": "stacks.meduim.739_Daily_Temperatures.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "two_pointers.easy.125_Valid_Palindrome.Solution",
         "description": "two_pointers.easy.125_Valid_Palindrome.Solution",
         "peekOfCode": "class Solution(object):\n    def isPalindrome(self, s):\n        text = s.lower()\n        length = len(text) \n        leftPointer = 0\n        rightPointer = length - 1\n        while leftPointer < rightPointer:\n            while (leftPointer < rightPointer) and not (text[leftPointer].isdigit() or text[leftPointer].isalpha()):\n                leftPointer += 1\n            while (leftPointer < rightPointer) and not (text[rightPointer].isdigit() or text[rightPointer].isalpha()):",
