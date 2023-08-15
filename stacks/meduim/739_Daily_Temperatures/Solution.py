@@ -9,6 +9,6 @@ class Solution(object):
                 result[poppedIndex] = (index - poppedIndex)
             stack.append(index)
 
-        return result
+        return result 
     
 print(Solution().dailyTemperatures([73,74,75,71,69,72,76,73]))
