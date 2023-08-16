@@ -371,7 +371,7 @@
         "kind": 6,
         "importPath": "stacks.hard.84_Largest_Rectangle_in_Histogram.Solution",
         "description": "stacks.hard.84_Largest_Rectangle_in_Histogram.Solution",
-        "peekOfCode": "class Solution(object):\n    def largestRectangleArea(self, heights):\n        maxArea = 0\n        stack = [] #pair: (height, index)\n        for i, j in enumerate(heights):\n            startIndex = i\n            while stack and stack[-1][0] > j:\n                value, index = stack.pop()\n                length = i - index\n                area = value * length",
+        "peekOfCode": "class Solution(object):\n    def largestRectangleArea(self, heights):\n        maxArea, stack = 0, []\n        heights.append(0)\n        for i, j in enumerate(heights):\n            startIndex = i\n            while stack and stack[-1][0] > j:\n                value, index = stack.pop()\n                maxArea = max(maxArea, value * (i - index))\n                startIndex = index",
         "detail": "stacks.hard.84_Largest_Rectangle_in_Histogram.Solution",
         "documentation": {}
     },
