@@ -83,8 +83,17 @@
         "kind": 6,
         "importPath": "binary_search.easy.704_Binary_Search.Solution",
         "description": "binary_search.easy.704_Binary_Search.Solution",
-        "peekOfCode": "class Solution(object):\n    def search(self, nums, target):\n        l, r = 0, len(nums)\n        while(l < r):\n            middleIndex = l + ((r - l) // 2)\n            if nums[middleIndex] < target:\n                if l == middleIndex:\n                    return -1\n                l = middleIndex\n            elif nums[middleIndex] > target:",
+        "peekOfCode": "class Solution(object):\n    def search(self, nums, target):\n        l, r = 0, len(nums) - 1\n        while l <= r:\n            middleIndex = l + ((r - l) // 2)\n            if nums[middleIndex] == target:\n                return middleIndex\n            if nums[middleIndex] < target:\n                l = middleIndex + 1\n            else:",
         "detail": "binary_search.easy.704_Binary_Search.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "binary_search.meduim.74_Search_a_2D_Matrix.Solution",
+        "description": "binary_search.meduim.74_Search_a_2D_Matrix.Solution",
+        "peekOfCode": "class Solution(object):\n    def searchMatrix(self, matrix, target):\n        m = len(matrix)\n        n = len(matrix[0])\n        length = m * n\n        l, r = 0, length - 1\n        while l <= r:\n            m = (l + r) // 2\n            arrayIndex = m // n\n            cellIndex = m - (arrayIndex * n)",
+        "detail": "binary_search.meduim.74_Search_a_2D_Matrix.Solution",
         "documentation": {}
     },
     {
