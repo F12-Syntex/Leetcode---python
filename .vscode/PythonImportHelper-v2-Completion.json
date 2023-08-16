@@ -81,6 +81,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "binary_search.easy.704_Binary_Search.Solution",
+        "description": "binary_search.easy.704_Binary_Search.Solution",
+        "peekOfCode": "class Solution(object):\n    def search(self, nums, target):\n        l, r = 0, len(nums)\n        while(l < r):\n            middleIndex = l + ((r - l) // 2)\n            if nums[middleIndex] < target:\n                if l == middleIndex:\n                    return -1\n                l = middleIndex\n            elif nums[middleIndex] > target:",
+        "detail": "binary_search.easy.704_Binary_Search.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "dailies.hard.239_Sliding_Window_Maximum.Solution",
         "description": "dailies.hard.239_Sliding_Window_Maximum.Solution",
         "peekOfCode": "class Solution(object):\n    def maxSlidingWindow(self, nums, k):\n        l, r = 0, (k - 1)\n        maximum = [0] * (len(nums) - r)\n        heap = []\n        # find max in first range\n        for i in range(l, r + 1):\n            heapq.heappush(heap, (-nums[i], i))  # store negation of elements in the heap\n        element = -heapq.heappop(heap)[0]  # negate the value again to get the maximum element\n        print(element)",
