@@ -1,20 +1,20 @@
 [
     {
-        "label": "heapq",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "heapq",
-        "description": "heapq",
-        "detail": "heapq",
-        "documentation": {}
-    },
-    {
         "label": "math",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "math",
         "description": "math",
         "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "heapq",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "heapq",
+        "description": "heapq",
+        "detail": "heapq",
         "documentation": {}
     },
     {
@@ -92,8 +92,17 @@
         "kind": 6,
         "importPath": "binary_search.meduim.74_Search_a_2D_Matrix.Solution",
         "description": "binary_search.meduim.74_Search_a_2D_Matrix.Solution",
-        "peekOfCode": "class Solution(object):\n    def searchMatrix(self, matrix, target):\n        m = len(matrix)\n        n = len(matrix[0])\n        length = m * n\n        l, r = 0, length - 1\n        while l <= r:\n            m = (l + r) // 2\n            arrayIndex = m // n\n            cellIndex = m - (arrayIndex * n)",
+        "peekOfCode": "class Solution(object):\n    def searchMatrix(self, matrix, target):\n        m = len(matrix)\n        n = len(matrix[0])\n        l, r = 0, (m * n) - 1\n        while l <= r:\n            m = (l + r) // 2\n            arrayIndex = m // n\n            cellIndex = m - (arrayIndex * n)\n            print(m)",
         "detail": "binary_search.meduim.74_Search_a_2D_Matrix.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "binary_search.meduim.875_Koko_Eating_Bananas.Solution",
+        "description": "binary_search.meduim.875_Koko_Eating_Bananas.Solution",
+        "peekOfCode": "class Solution(object):\n    def minEatingSpeed(self, piles, h):\n        l, r = 1, max(piles)\n        minimum = r\n        while l <= r:\n            k = (l + r) // 2\n            hours = 0\n            for p in piles:\n                hours += math.ceil(p / k)\n            if hours <= h:",
+        "detail": "binary_search.meduim.875_Koko_Eating_Bananas.Solution",
         "documentation": {}
     },
     {

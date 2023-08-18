@@ -3,9 +3,8 @@ class Solution(object):
 
         m = len(matrix)
         n = len(matrix[0])
-        length = m * n
 
-        l, r = 0, length - 1
+        l, r = 0, (m * n) - 1
 
         while l <= r:
             m = (l + r) // 2
