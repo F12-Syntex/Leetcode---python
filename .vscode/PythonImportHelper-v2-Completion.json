@@ -90,6 +90,24 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "binary_search.hard.154_Find_Minimum_in_Rotated_Sorted_Array_II.Solution",
+        "description": "binary_search.hard.154_Find_Minimum_in_Rotated_Sorted_Array_II.Solution",
+        "peekOfCode": "class Solution(object):\n    def findMin(self, nums):\n        l, r = 0, len(nums) - 1\n        res = nums[0]\n        while l <= r:\n            m = ( l + r ) // 2\n            res = min(res, nums[m])\n            if nums[l] < nums[r]:\n                return min(nums[l], res)\n            if(nums[m] == nums[l]):",
+        "detail": "binary_search.hard.154_Find_Minimum_in_Rotated_Sorted_Array_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "binary_search.meduim.153_Find_Minimum_in_Rotated_Sorted_Array.Solution",
+        "description": "binary_search.meduim.153_Find_Minimum_in_Rotated_Sorted_Array.Solution",
+        "peekOfCode": "class Solution(object):\n    def findMin(self, nums):\n        l, r = 0, len(nums) - 1\n        res = nums[0]\n        while l <= r:\n            m = ( l + r ) // 2\n            res = min(res, nums[m])\n            if nums[l] <= nums[r]:\n                return min(nums[l], res)\n            if nums[m] >= nums[l]:",
+        "detail": "binary_search.meduim.153_Find_Minimum_in_Rotated_Sorted_Array.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "binary_search.meduim.74_Search_a_2D_Matrix.Solution",
         "description": "binary_search.meduim.74_Search_a_2D_Matrix.Solution",
         "peekOfCode": "class Solution(object):\n    def searchMatrix(self, matrix, target):\n        m = len(matrix)\n        n = len(matrix[0])\n        l, r = 0, (m * n) - 1\n        while l <= r:\n            m = (l + r) // 2\n            arrayIndex = m // n\n            cellIndex = m - (arrayIndex * n)\n            print(m)",
