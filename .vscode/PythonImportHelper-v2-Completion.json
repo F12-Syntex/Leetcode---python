@@ -108,6 +108,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "binary_search.meduim.33_Search_in_Rotated_Sorted_Array.Solution",
+        "description": "binary_search.meduim.33_Search_in_Rotated_Sorted_Array.Solution",
+        "peekOfCode": "class Solution(object):\n    def search(self, nums, target):\n        l, r = 0, len(nums) - 1\n        while l <= r:\n            m = (l + r) // 2\n            if nums[m] == target:\n                return m\n            #left sorted portion\n            elif nums[m] >= nums[l]:\n                if target > nums[m]:",
+        "detail": "binary_search.meduim.33_Search_in_Rotated_Sorted_Array.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "binary_search.meduim.74_Search_a_2D_Matrix.Solution",
         "description": "binary_search.meduim.74_Search_a_2D_Matrix.Solution",
         "peekOfCode": "class Solution(object):\n    def searchMatrix(self, matrix, target):\n        m = len(matrix)\n        n = len(matrix[0])\n        l, r = 0, (m * n) - 1\n        while l <= r:\n            m = (l + r) // 2\n            arrayIndex = m // n\n            cellIndex = m - (arrayIndex * n)\n            print(m)",
