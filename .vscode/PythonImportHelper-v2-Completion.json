@@ -110,7 +110,7 @@
         "kind": 6,
         "importPath": "binary_search.meduim.33_Search_in_Rotated_Sorted_Array.Solution",
         "description": "binary_search.meduim.33_Search_in_Rotated_Sorted_Array.Solution",
-        "peekOfCode": "class Solution(object):\n    def search(self, nums, target):\n        l, r = 0, len(nums) - 1\n        while l <= r:\n            m = (l + r) // 2\n            if nums[m] == target:\n                return m\n            #left sorted portion\n            elif nums[m] >= nums[l]:\n                if target > nums[m]:",
+        "peekOfCode": "class Solution(object):\n    def search(self, nums, target):\n        l, r = 0, len(nums) - 1\n        while l <= r:\n            m = (l + r) // 2\n            if nums[m] == target:\n                return m\n            elif nums[m] >= nums[l]:\n                if target > nums[m] or target < nums[l]:\n                    l = m + 1",
         "detail": "binary_search.meduim.33_Search_in_Rotated_Sorted_Array.Solution",
         "documentation": {}
     },

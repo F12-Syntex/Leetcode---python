@@ -9,16 +9,16 @@ class Solution(object):
             if nums[m] == target:
                 return m
 
-            #left sorted portion
             elif nums[m] >= nums[l]:
-                if target > nums[m]:
+                if target > nums[m] or target < nums[l]:
                     l = m + 1
-                elif target < nums[l]:
+                else:
+                    r = m - 1
+            else:
+                if target < nums[m] or target > nums[r]:
                     r = m - 1
                 else:
-                    return m
-
-
+                    l = m + 1
 
         return -1
 
