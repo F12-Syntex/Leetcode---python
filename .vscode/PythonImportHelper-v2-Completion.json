@@ -133,6 +133,33 @@
         "documentation": {}
     },
     {
+        "label": "TimeMap",
+        "kind": 6,
+        "importPath": "binary_search.meduim.981_Time_Based_Key-Value_Store.Solution",
+        "description": "binary_search.meduim.981_Time_Based_Key-Value_Store.Solution",
+        "peekOfCode": "class TimeMap(object):\n    def __init__(self):\n        self.store = {}\n    def set(self, key, value, timestamp):\n        if key not in self.store:\n            self.store[key] = []\n        self.store[key].append([value, timestamp])\n    def get(self, key, timestamp):\n        res = \"\"\n        if key not in self.store:",
+        "detail": "binary_search.meduim.981_Time_Based_Key-Value_Store.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "obj",
+        "kind": 5,
+        "importPath": "binary_search.meduim.981_Time_Based_Key-Value_Store.Solution",
+        "description": "binary_search.meduim.981_Time_Based_Key-Value_Store.Solution",
+        "peekOfCode": "obj = TimeMap()\nobj.set(1, 1, 1)\nparam_2 = obj.get(1,1)\nprint(param_2)",
+        "detail": "binary_search.meduim.981_Time_Based_Key-Value_Store.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "param_2",
+        "kind": 5,
+        "importPath": "binary_search.meduim.981_Time_Based_Key-Value_Store.Solution",
+        "description": "binary_search.meduim.981_Time_Based_Key-Value_Store.Solution",
+        "peekOfCode": "param_2 = obj.get(1,1)\nprint(param_2)",
+        "detail": "binary_search.meduim.981_Time_Based_Key-Value_Store.Solution",
+        "documentation": {}
+    },
+    {
         "label": "Solution",
         "kind": 6,
         "importPath": "dailies.hard.239_Sliding_Window_Maximum.Solution",
