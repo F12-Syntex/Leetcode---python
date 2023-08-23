@@ -450,6 +450,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "sliding_window.easy.121_Best_Time_to_Buy_and_Sell_Stock.Solution",
+        "description": "sliding_window.easy.121_Best_Time_to_Buy_and_Sell_Stock.Solution",
+        "peekOfCode": "class Solution(object):\n    def maxProfit(self, prices):\n        l, r = 0, 1\n        profit = 0\n        while r < len(prices):\n            if prices[r] > prices[l]:\n                profit = max(profit, prices[r] - prices[l])\n            else:\n                l = r\n            r+=1",
+        "detail": "sliding_window.easy.121_Best_Time_to_Buy_and_Sell_Stock.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "stacks.easy.20. Valid Parentheses.Solution",
         "description": "stacks.easy.20. Valid Parentheses.Solution",
         "peekOfCode": "class Solution(object):\n    def isValid1(self, s):\n        stack = []\n        closed = {  ')' : '(',\n                    '}' : '{',\n                    ']' : '['\n                }\n        for i in s:\n            if i in closed:\n                if stack[-1] == closed[i] and stack:",
