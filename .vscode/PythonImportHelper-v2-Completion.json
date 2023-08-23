@@ -99,6 +99,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "binary_search.hard.4_Median_of_Two_Sorted_Arrays.Solution",
+        "description": "binary_search.hard.4_Median_of_Two_Sorted_Arrays.Solution",
+        "peekOfCode": "class Solution(object):\n    def findMedianSortedArrays(self, nums1, nums2):\n        size = len(nums1) + len(nums2)\n        half = size // 2\n        #if nums2 is empty\n        if len(nums2) == 0:\n            size = len(nums1) - 1\n            if (size+1) % 2:\n                return nums1[size // 2] / 1\n            else:",
+        "detail": "binary_search.hard.4_Median_of_Two_Sorted_Arrays.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "binary_search.meduim.153_Find_Minimum_in_Rotated_Sorted_Array.Solution",
         "description": "binary_search.meduim.153_Find_Minimum_in_Rotated_Sorted_Array.Solution",
         "peekOfCode": "class Solution(object):\n    def findMin(self, nums):\n        l, r = 0, len(nums) - 1\n        res = nums[0]\n        while l <= r:\n            m = ( l + r ) // 2\n            res = min(res, nums[m])\n            if nums[l] <= nums[r]:\n                return min(nums[l], res)\n            if nums[m] >= nums[l]:",
