@@ -459,6 +459,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "sliding_window.meduim.3_Longest_Substring_Without_Repeating_Characters.Solution",
+        "description": "sliding_window.meduim.3_Longest_Substring_Without_Repeating_Characters.Solution",
+        "peekOfCode": "class Solution(object):\n    def lengthOfLongestSubstring(self, s):\n        l, r = 0, 0\n        res = 0\n        curr = \"\"\n        while r < len(s):\n            i = s[r]\n            if i in curr:\n                if len(curr) > res:\n                    res = len(curr)",
+        "detail": "sliding_window.meduim.3_Longest_Substring_Without_Repeating_Characters.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "stacks.easy.20. Valid Parentheses.Solution",
         "description": "stacks.easy.20. Valid Parentheses.Solution",
         "peekOfCode": "class Solution(object):\n    def isValid1(self, s):\n        stack = []\n        closed = {  ')' : '(',\n                    '}' : '{',\n                    ']' : '['\n                }\n        for i in s:\n            if i in closed:\n                if stack[-1] == closed[i] and stack:",
