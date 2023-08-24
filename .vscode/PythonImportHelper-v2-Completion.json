@@ -461,7 +461,7 @@
         "kind": 6,
         "importPath": "sliding_window.meduim.3_Longest_Substring_Without_Repeating_Characters.Solution",
         "description": "sliding_window.meduim.3_Longest_Substring_Without_Repeating_Characters.Solution",
-        "peekOfCode": "class Solution(object):\n    def lengthOfLongestSubstring(self, s):\n        l, r = 0, 0\n        res = 0\n        curr = \"\"\n        while r < len(s):\n            i = s[r]\n            if i in curr:\n                if len(curr) > res:\n                    res = len(curr)",
+        "peekOfCode": "class Solution(object):\n    def lengthOfLongestSubstring(self, s):\n        l, r = 0, 0\n        res = 0\n        while r < len(s):\n            i = s[r]\n            curr = s[l:r]\n            if i in curr:\n                size = r - l\n                if res < size:",
         "detail": "sliding_window.meduim.3_Longest_Substring_Without_Repeating_Characters.Solution",
         "documentation": {}
     },

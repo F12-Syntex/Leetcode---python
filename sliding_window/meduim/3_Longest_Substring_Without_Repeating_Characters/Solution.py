@@ -3,20 +3,20 @@ class Solution(object):
         l, r = 0, 0
 
         res = 0
-        curr = ""
 
         while r < len(s):
             i = s[r]
+            curr = s[l:r]
 
             if i in curr:
-                if len(curr) > res:
-                    res = len(curr)
-                curr = curr.split(i)[1] + i
-            else:
-                curr += i
+                size = r - l
+                if res < size:
+                    res = size
+
+                l += curr.index(i) + 1
 
             r+=1
         
-        return max(res, len(curr))
+        return max(res, (r - l))
 
 print(Solution().lengthOfLongestSubstring("jbpnbwwd"))
