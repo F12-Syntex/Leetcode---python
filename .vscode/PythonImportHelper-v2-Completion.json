@@ -468,6 +468,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "sliding_window.meduim.424_Longest_Repeating_Character_Replacement.Solution",
+        "description": "sliding_window.meduim.424_Longest_Repeating_Character_Replacement.Solution",
+        "peekOfCode": "class Solution(object):\n    def characterReplacement(self, s, k):\n        return -1\nprint(Solution().characterReplacement(\"ABAB\", 2))",
+        "detail": "sliding_window.meduim.424_Longest_Repeating_Character_Replacement.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "stacks.easy.20. Valid Parentheses.Solution",
         "description": "stacks.easy.20. Valid Parentheses.Solution",
         "peekOfCode": "class Solution(object):\n    def isValid1(self, s):\n        stack = []\n        closed = {  ')' : '(',\n                    '}' : '{',\n                    ']' : '['\n                }\n        for i in s:\n            if i in closed:\n                if stack[-1] == closed[i] and stack:",
