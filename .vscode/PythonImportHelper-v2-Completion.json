@@ -470,7 +470,7 @@
         "kind": 6,
         "importPath": "sliding_window.meduim.424_Longest_Repeating_Character_Replacement.Solution",
         "description": "sliding_window.meduim.424_Longest_Repeating_Character_Replacement.Solution",
-        "peekOfCode": "class Solution(object):\n    def characterReplacement(self, s, k):\n        return -1\nprint(Solution().characterReplacement(\"ABAB\", 2))",
+        "peekOfCode": "class Solution(object):\n    def characterReplacement(self, s, k):\n        l = 0\n        freq = {}\n        curr = 0\n        for r in range(len(s)):\n            freq[s[r]] = freq.get(s[r], 0) + 1\n            while (r - l + 1) - max(freq.values()) > k:\n                freq[s[l]] -= 1\n                l+=1",
         "detail": "sliding_window.meduim.424_Longest_Repeating_Character_Replacement.Solution",
         "documentation": {}
     },
