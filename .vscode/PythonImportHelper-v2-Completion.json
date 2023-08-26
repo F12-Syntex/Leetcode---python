@@ -485,6 +485,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "sliding_window.meduim.567_Permutation_in_String.Solution",
+        "description": "sliding_window.meduim.567_Permutation_in_String.Solution",
+        "peekOfCode": "class Solution(object):\n    def checkInclusion(self, s1, s2):\n        print(s1)\n        return False\nprint(Solution().checkInclusion(\"ab\", \"eidbaooo\"))",
+        "detail": "sliding_window.meduim.567_Permutation_in_String.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "stacks.easy.20. Valid Parentheses.Solution",
         "description": "stacks.easy.20. Valid Parentheses.Solution",
         "peekOfCode": "class Solution(object):\n    def isValid1(self, s):\n        stack = []\n        closed = {  ')' : '(',\n                    '}' : '{',\n                    ']' : '['\n                }\n        for i in s:\n            if i in closed:\n                if stack[-1] == closed[i] and stack:",
