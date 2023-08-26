@@ -42,6 +42,15 @@
         "documentation": {}
     },
     {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {}
+    },
+    {
         "label": "Solution",
         "kind": 6,
         "importPath": "arrays_and_hashing.meduim.128_Longest_Consecutive_Sequence.Solution",
@@ -487,7 +496,7 @@
         "kind": 6,
         "importPath": "sliding_window.meduim.567_Permutation_in_String.Solution",
         "description": "sliding_window.meduim.567_Permutation_in_String.Solution",
-        "peekOfCode": "class Solution(object):\n    def checkInclusion(self, s1, s2):\n        print(s1)\n        return False\nprint(Solution().checkInclusion(\"ab\", \"eidbaooo\"))",
+        "peekOfCode": "class Solution(object):\n   def checkInclusion(self, s1, s2):\n        freqS1 = {i: 0 for i in string.ascii_lowercase}\n        freqS2 = {i: 0 for i in string.ascii_lowercase}\n        for i in s1:\n            freqS1[i] += 1\n        l = 0\n        for r in range(len(s2)):\n            freqS2[s2[r]] += 1\n            if (r - l + 1) > len(s1):",
         "detail": "sliding_window.meduim.567_Permutation_in_String.Solution",
         "documentation": {}
     },
