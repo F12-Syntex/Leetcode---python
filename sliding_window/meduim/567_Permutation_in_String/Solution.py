@@ -16,12 +16,8 @@ class Solution(object):
                 freqS2[s2[l]] -= 1
                 l+=1
 
-
-            matched = True
-            for i in string.ascii_letters:
-                if freqS1[i] != freqS2[i]:
-                    matched = False
-                    break
+            if freqS1 == freqS2:
+                return True
 
         return False
     
