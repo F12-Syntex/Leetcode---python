@@ -476,6 +476,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "sliding_window.hard.239_Sliding_Window_Maximum.Solution",
+        "description": "sliding_window.hard.239_Sliding_Window_Maximum.Solution",
+        "peekOfCode": "class Solution(object):\n    def maxSlidingWindow(self, nums, k):\n        l = 0\n        currentMin = float(\"-infinity\")\n        res = []\n        res.append(max(nums[l:k]));\n        #explore the other partitions\n        for r in range(k, len(nums)):\n            l+=1\n            currentMin = max(nums[l:r+1])",
+        "detail": "sliding_window.hard.239_Sliding_Window_Maximum.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "sliding_window.hard.76_Minimum_Window_Substring.Solution",
         "description": "sliding_window.hard.76_Minimum_Window_Substring.Solution",
         "peekOfCode": "class Solution(object):\n    def minWindow(self, s, t):\n        if(len(t) == 0 or len(t) > len(s)):\n            return \"\"\n        countS, countT = {}, {}\n        minWindow = float(\"infinity\")\n        res = [-1, -1]\n        l = 0\n        #fill the countT map\n        for i in t:",
