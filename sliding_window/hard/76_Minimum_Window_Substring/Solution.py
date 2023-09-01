@@ -3,6 +3,9 @@ import string
 class Solution(object):
     def minWindow(self, s, t):
 
+        if(len(t) == 0 or len(t) > len(s)):
+            return ""
+
         countS, countT = {}, {}
         minWindow = float("infinity")
         res = [-1, -1]
