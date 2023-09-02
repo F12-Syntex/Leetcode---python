@@ -26,12 +26,12 @@
         "documentation": {}
     },
     {
-        "label": "string",
+        "label": "collections",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "string",
-        "description": "string",
-        "detail": "string",
+        "importPath": "collections",
+        "description": "collections",
+        "detail": "collections",
         "documentation": {}
     },
     {
@@ -48,6 +48,15 @@
         "description": "collections",
         "isExtraImport": true,
         "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
         "documentation": {}
     },
     {
@@ -478,7 +487,7 @@
         "kind": 6,
         "importPath": "sliding_window.hard.239_Sliding_Window_Maximum.Solution",
         "description": "sliding_window.hard.239_Sliding_Window_Maximum.Solution",
-        "peekOfCode": "class Solution(object):\n    def maxSlidingWindow(self, nums, k):\n        l = 0\n        currentMin = float(\"-infinity\")\n        res = []\n        res.append(max(nums[l:k]));\n        #explore the other partitions\n        for r in range(k, len(nums)):\n            l+=1\n            currentMin = max(nums[l:r+1])",
+        "peekOfCode": "class Solution(object):\n    def maxSlidingWindow(self, nums, k):\n        res = []\n        q = collections.deque()\n        l = 0\n        for r in range(len(nums)):\n            print(r)\n            #remove all smaller values at the end of the dequeue\n            while q and nums[r] > nums[q[-1]]:\n                q.pop()",
         "detail": "sliding_window.hard.239_Sliding_Window_Maximum.Solution",
         "documentation": {}
     },
