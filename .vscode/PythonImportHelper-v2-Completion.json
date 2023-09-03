@@ -332,6 +332,87 @@
     {
         "label": "ListNode",
         "kind": 6,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + (str(self.next.val) if self.next else \"None\")\n        return res\nclass Solution(object):",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "class Solution(object):\n    def hasCycle2(self, head):\n        mapping = {}\n        index = 0\n        while head:\n            if head.next in mapping:\n                return mapping[head.next]\n            mapping[head] = index\n            head = head.next\n            index += 1 ",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node4",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node4 = ListNode(-4)\nnode3 = ListNode(0)\nnode2 = ListNode(2)\nnode1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node3",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node3 = ListNode(0)\nnode2 = ListNode(2)\nnode1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node2",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node2 = ListNode(2)\nnode1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node1",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node1.next",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node1.next = node2\nnode2.next = node3\nnode3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node2.next",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node2.next = node3\nnode3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node3.next",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
         "importPath": "linked_list.easy.206_Reverse_Linked_List.Solution",
         "description": "linked_list.easy.206_Reverse_Linked_List.Solution",
         "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution(object):",
