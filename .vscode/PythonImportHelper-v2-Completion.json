@@ -420,6 +420,51 @@
         "documentation": {}
     },
     {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "description": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution(object):",
+        "detail": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "description": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "peekOfCode": "class Solution(object):\n    def removeNthFromEnd(self, head, n):\n        dummy = ListNode(0, head)\n        l = dummy\n        r = head\n        for i in range(n):\n            r = r.next\n        while r:\n            l = l.next\n            r = r.next",
+        "detail": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist1",
+        "kind": 5,
+        "importPath": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "description": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "peekOfCode": "linkedlist1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nlinkedlist2 = ListNode(1)\nlinkedlist3 = ListNode(1, 2)\nSolution().removeNthFromEnd(linkedlist1, 2)",
+        "detail": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist2",
+        "kind": 5,
+        "importPath": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "description": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "peekOfCode": "linkedlist2 = ListNode(1)\nlinkedlist3 = ListNode(1, 2)\nSolution().removeNthFromEnd(linkedlist1, 2)",
+        "detail": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist3",
+        "kind": 5,
+        "importPath": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "description": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "peekOfCode": "linkedlist3 = ListNode(1, 2)\nSolution().removeNthFromEnd(linkedlist1, 2)",
+        "detail": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "documentation": {}
+    },
+    {
         "label": "TreeNode",
         "kind": 6,
         "importPath": "path-finding.100. SameTree.Solution",
