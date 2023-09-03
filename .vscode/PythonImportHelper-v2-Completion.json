@@ -528,6 +528,42 @@
         "documentation": {}
     },
     {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "description": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution(object):",
+        "detail": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "description": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "peekOfCode": "class Solution(object):\n    def addTwoNumbersSol1(self, l1, l2):\n        p1 = \"\"\n        p2 = \"\"\n        prev = None\n        while l1:\n            nxt = l1.next\n            l1.next = prev\n            prev = l1\n            l1 = nxt",
+        "detail": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist1",
+        "kind": 5,
+        "importPath": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "description": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "peekOfCode": "linkedlist1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nlinkedlist2 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().addTwoNumbers(linkedlist1, linkedlist2))",
+        "detail": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist2",
+        "kind": 5,
+        "importPath": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "description": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "peekOfCode": "linkedlist2 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().addTwoNumbers(linkedlist1, linkedlist2))",
+        "detail": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "documentation": {}
+    },
+    {
         "label": "TreeNode",
         "kind": 6,
         "importPath": "path-finding.100. SameTree.Solution",

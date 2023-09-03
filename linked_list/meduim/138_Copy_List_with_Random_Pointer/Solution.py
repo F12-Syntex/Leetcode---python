@@ -39,7 +39,6 @@ class Solution(object):
         return mapping[head]
     
 node5 = ListNode(1, None, None)
-
 node4 = ListNode(10, node5, node5)
 node3 = ListNode(11, node4, node5)
 node2 = ListNode(13, node3, node4)
