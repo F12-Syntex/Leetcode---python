@@ -539,6 +539,96 @@
     {
         "label": "ListNode",
         "kind": 6,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + (str(self.next.val) if self.next else \"None\")\n        return res\nclass Solution(object):",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "class Solution(object):\n    def hasCycle(self, head):\n        mapping = set()\n        while head:\n            if head.next in mapping:\n                return head.next\n            mapping.add(head)\n            head = head.next\n        return None\nnode4 = ListNode(-4)",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node4",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node4 = ListNode(-4)\nnode3 = ListNode(0)\nnode2 = ListNode(2)\nnode1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node3",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node3 = ListNode(0)\nnode2 = ListNode(2)\nnode1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node2",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node2 = ListNode(2)\nnode1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node1",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node1.next",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node1.next = node2\nnode2.next = node3\nnode3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node2.next",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node2.next = node3\nnode3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node3.next",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node4.next",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
         "importPath": "linked_list.meduim.143_Reorder_List.Solution",
         "description": "linked_list.meduim.143_Reorder_List.Solution",
         "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution(object):",
