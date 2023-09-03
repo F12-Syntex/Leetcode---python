@@ -11,7 +11,6 @@ class ListNode(object):
     
 class Solution():
     def mergeTwoLists(self, list1, list2):
-
         root = ListNode()
         tail = root
 

@@ -332,28 +332,28 @@
     {
         "label": "ListNode",
         "kind": 6,
-        "importPath": "linked_list.easy.206. Reverse Linked List.Solution",
-        "description": "linked_list.easy.206. Reverse Linked List.Solution",
+        "importPath": "linked_list.easy.206_Reverse_Linked_List.Solution",
+        "description": "linked_list.easy.206_Reverse_Linked_List.Solution",
         "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution(object):",
-        "detail": "linked_list.easy.206. Reverse Linked List.Solution",
+        "detail": "linked_list.easy.206_Reverse_Linked_List.Solution",
         "documentation": {}
     },
     {
         "label": "Solution",
         "kind": 6,
-        "importPath": "linked_list.easy.206. Reverse Linked List.Solution",
-        "description": "linked_list.easy.206. Reverse Linked List.Solution",
+        "importPath": "linked_list.easy.206_Reverse_Linked_List.Solution",
+        "description": "linked_list.easy.206_Reverse_Linked_List.Solution",
         "peekOfCode": "class Solution(object):\n    def reverseList(self, head):\n        curr, prev = head, None\n        while curr:\n            #save the next list to explore\n            nxt = curr.next\n            #set the current val's next to the prev node\n            curr.next = prev\n            #set the new prev to explore, which is the curr nodes minus the curr value\n            prev = curr",
-        "detail": "linked_list.easy.206. Reverse Linked List.Solution",
+        "detail": "linked_list.easy.206_Reverse_Linked_List.Solution",
         "documentation": {}
     },
     {
         "label": "linkedlist",
         "kind": 5,
-        "importPath": "linked_list.easy.206. Reverse Linked List.Solution",
-        "description": "linked_list.easy.206. Reverse Linked List.Solution",
+        "importPath": "linked_list.easy.206_Reverse_Linked_List.Solution",
+        "description": "linked_list.easy.206_Reverse_Linked_List.Solution",
         "peekOfCode": "linkedlist = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().reverseList(linkedlist))",
-        "detail": "linked_list.easy.206. Reverse Linked List.Solution",
+        "detail": "linked_list.easy.206_Reverse_Linked_List.Solution",
         "documentation": {}
     },
     {
@@ -390,6 +390,33 @@
         "description": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
         "peekOfCode": "linkedlist2 = ListNode(1, ListNode(3, ListNode(4)))\nprint(Solution().mergeTwoLists(linkedlist1, linkedlist2))",
         "detail": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.meduim.143_Reorder_List.Solution",
+        "description": "linked_list.meduim.143_Reorder_List.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution(object):",
+        "detail": "linked_list.meduim.143_Reorder_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.143_Reorder_List.Solution",
+        "description": "linked_list.meduim.143_Reorder_List.Solution",
+        "peekOfCode": "class Solution(object):\n    def reorderList(self, head):\n        s, f = head, head.next\n        #partition\n        while f and f.next:\n            s = s.next\n            f = f.next.next\n        p1 = head\n        p2 = s.next\n        s.next = prev = None",
+        "detail": "linked_list.meduim.143_Reorder_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist",
+        "kind": 5,
+        "importPath": "linked_list.meduim.143_Reorder_List.Solution",
+        "description": "linked_list.meduim.143_Reorder_List.Solution",
+        "peekOfCode": "linkedlist = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().reorderList(linkedlist))",
+        "detail": "linked_list.meduim.143_Reorder_List.Solution",
         "documentation": {}
     },
     {
