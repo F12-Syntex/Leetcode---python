@@ -395,6 +395,69 @@
     {
         "label": "ListNode",
         "kind": 6,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, x, nxt=None, random=None):\n        self.val = int(x)\n        self.next = nxt\n        self.random = random\n    def __str__(self) -> str:\n        res = str(self.val) + \"(\" + str(self.random) + \")\"\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "class Solution(object):\n    def copyRandomList(self, head):\n        #map all the nodes\n        mapping = {\n            None : None\n        }\n        curr = head\n        while curr:\n            mapping[curr] = ListNode(curr.val)\n            curr = curr.next",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node5",
+        "kind": 5,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "node5 = ListNode(1, None, None)\nnode4 = ListNode(10, node5, node5)\nnode3 = ListNode(11, node4, node5)\nnode2 = ListNode(13, node3, node4)\nnode1 = ListNode(7, node2, node3)\nprint(Solution().copyRandomList(node1))",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node4",
+        "kind": 5,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "node4 = ListNode(10, node5, node5)\nnode3 = ListNode(11, node4, node5)\nnode2 = ListNode(13, node3, node4)\nnode1 = ListNode(7, node2, node3)\nprint(Solution().copyRandomList(node1))",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node3",
+        "kind": 5,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "node3 = ListNode(11, node4, node5)\nnode2 = ListNode(13, node3, node4)\nnode1 = ListNode(7, node2, node3)\nprint(Solution().copyRandomList(node1))",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node2",
+        "kind": 5,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "node2 = ListNode(13, node3, node4)\nnode1 = ListNode(7, node2, node3)\nprint(Solution().copyRandomList(node1))",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node1",
+        "kind": 5,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "node1 = ListNode(7, node2, node3)\nprint(Solution().copyRandomList(node1))",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
         "importPath": "linked_list.meduim.143_Reorder_List.Solution",
         "description": "linked_list.meduim.143_Reorder_List.Solution",
         "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution(object):",
