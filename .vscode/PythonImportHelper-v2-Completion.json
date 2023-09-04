@@ -699,6 +699,15 @@
         "documentation": {}
     },
     {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.287_Find_the_Duplicate_Number.Solution",
+        "description": "linked_list.meduim.287_Find_the_Duplicate_Number.Solution",
+        "peekOfCode": "class Solution(object):\n    def findDuplicate(self, nums):\n        #find collision\n        s, f = 0, 0\n        while s != f or s == 0:\n            #s.next\n            s = nums[s]\n            #f.next.next\n            f = nums[f] \n            f = nums[f]",
+        "detail": "linked_list.meduim.287_Find_the_Duplicate_Number.Solution",
+        "documentation": {}
+    },
+    {
         "label": "ListNode",
         "kind": 6,
         "importPath": "linked_list.meduim.2_Add_Two_Numbers.Solution",
