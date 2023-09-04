@@ -654,6 +654,15 @@
         "documentation": {}
     },
     {
+        "label": "LRUCache",
+        "kind": 6,
+        "importPath": "linked_list.meduim.146_LRU_Cache.Solution",
+        "description": "linked_list.meduim.146_LRU_Cache.Solution",
+        "peekOfCode": "class LRUCache(object):\n    def __init__(self, capacity):\n        \"\"\"\n        :type capacity: int\n        \"\"\"\n    def get(self, key):\n        \"\"\"\n        :type key: int\n        :rtype: int\n        \"\"\"",
+        "detail": "linked_list.meduim.146_LRU_Cache.Solution",
+        "documentation": {}
+    },
+    {
         "label": "ListNode",
         "kind": 6,
         "importPath": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
@@ -1038,6 +1047,15 @@
         "description": "two_pointers.easy.125_Valid_Palindrome.Solution",
         "peekOfCode": "class Solution(object):\n    def isPalindrome(self, s):\n        text = s.lower()\n        length = len(text) \n        leftPointer = 0\n        rightPointer = length - 1\n        while leftPointer < rightPointer:\n            while (leftPointer < rightPointer) and not (text[leftPointer].isdigit() or text[leftPointer].isalpha()):\n                leftPointer += 1\n            while (leftPointer < rightPointer) and not (text[rightPointer].isdigit() or text[rightPointer].isalpha()):",
         "detail": "two_pointers.easy.125_Valid_Palindrome.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "two_pointers.easy.680_Valid_Palindrome_II.Solution",
+        "description": "two_pointers.easy.680_Valid_Palindrome_II.Solution",
+        "peekOfCode": "class Solution(object):\n    def validPalindrome(self, s):\n        l, r = 0, len(s) - 1\n        while l <= r:\n            if(s[l] != s[r]):\n                str1 = s[:l] + s[l+1:]\n                str2 = s[:r] + s[r+1:]\n                return str1 == str1[::-1] or str2 == str2[::-1]\n            l += 1\n            r -= 1",
+        "detail": "two_pointers.easy.680_Valid_Palindrome_II.Solution",
         "documentation": {}
     },
     {
