@@ -476,6 +476,51 @@
     {
         "label": "ListNode",
         "kind": 6,
+        "importPath": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "description": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + (str(self.next))\n        return res\nclass Solution(object):",
+        "detail": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "description": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "peekOfCode": "class Solution(object):\n    def mergeKLists(self, lists):\n        #check if the lists are valid\n        if not lists and len(lists) == 0:\n            return None\n        #we will do a merge sort sorting two ll at a time\n        while len(lists) > 1:\n            currentlySorted = []\n            for i in range(0, len(lists), 2):\n                list1 = lists[i]",
+        "detail": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist1",
+        "kind": 5,
+        "importPath": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "description": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "peekOfCode": "linkedlist1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nlinkedlist2 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nlinkedlist3 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().mergeKLists([linkedlist1, linkedlist2, linkedlist3]))\n# print(Solution().mergeTwoLists(linkedlist1, linkedlist2))",
+        "detail": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist2",
+        "kind": 5,
+        "importPath": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "description": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "peekOfCode": "linkedlist2 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nlinkedlist3 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().mergeKLists([linkedlist1, linkedlist2, linkedlist3]))\n# print(Solution().mergeTwoLists(linkedlist1, linkedlist2))",
+        "detail": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist3",
+        "kind": 5,
+        "importPath": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "description": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "peekOfCode": "linkedlist3 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().mergeKLists([linkedlist1, linkedlist2, linkedlist3]))\n# print(Solution().mergeTwoLists(linkedlist1, linkedlist2))",
+        "detail": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
         "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
         "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
         "peekOfCode": "class ListNode(object):\n    def __init__(self, x, nxt=None, random=None):\n        self.val = int(x)\n        self.next = nxt\n        self.random = random\n    def __str__(self) -> str:\n        res = str(self.val) + \"(\" + str(self.random) + \")\"\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res",

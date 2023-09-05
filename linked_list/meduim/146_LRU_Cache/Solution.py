@@ -51,8 +51,6 @@ class LRUCache(object):
         #set the parent tails prev to the new tail
         self.tail.prev = node
 
-
-
         return -1
 
     #get the value from the key if it exists
