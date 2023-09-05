@@ -654,11 +654,47 @@
         "documentation": {}
     },
     {
+        "label": "DoublyListNode",
+        "kind": 6,
+        "importPath": "linked_list.meduim.146_LRU_Cache.Solution",
+        "description": "linked_list.meduim.146_LRU_Cache.Solution",
+        "peekOfCode": "class DoublyListNode(object):\n    def __init__(self, key, val):\n        self.key, self.val = key, val\n        self.next = self.prev = None\nclass LRUCache(object):\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.cache = {}\n        self.head = DoublyListNode(0, 0)\n        self.tail = DoublyListNode(0, 0)        ",
+        "detail": "linked_list.meduim.146_LRU_Cache.Solution",
+        "documentation": {}
+    },
+    {
         "label": "LRUCache",
         "kind": 6,
         "importPath": "linked_list.meduim.146_LRU_Cache.Solution",
         "description": "linked_list.meduim.146_LRU_Cache.Solution",
-        "peekOfCode": "class LRUCache(object):\n    def __init__(self, capacity):\n        \"\"\"\n        :type capacity: int\n        \"\"\"\n    def get(self, key):\n        \"\"\"\n        :type key: int\n        :rtype: int\n        \"\"\"",
+        "peekOfCode": "class LRUCache(object):\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.cache = {}\n        self.head = DoublyListNode(0, 0)\n        self.tail = DoublyListNode(0, 0)        \n    #remove the node from the dll\n    def remove(self, node):\n        if node.key not in self.cache:\n            return ",
+        "detail": "linked_list.meduim.146_LRU_Cache.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "obj",
+        "kind": 5,
+        "importPath": "linked_list.meduim.146_LRU_Cache.Solution",
+        "description": "linked_list.meduim.146_LRU_Cache.Solution",
+        "peekOfCode": "obj = LRUCache(2)\nobj.put(1, \"hi\")\nobj.put(2, \"hey\")\n#2, 1\nparam_1 = obj.get(2)\n#2, 3\nobj.put(3,\"hiyo\")\nparam_1 = obj.get(2)\n#2, 4\nobj.put(4, \"wow\")",
+        "detail": "linked_list.meduim.146_LRU_Cache.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "param_1",
+        "kind": 5,
+        "importPath": "linked_list.meduim.146_LRU_Cache.Solution",
+        "description": "linked_list.meduim.146_LRU_Cache.Solution",
+        "peekOfCode": "param_1 = obj.get(2)\n#2, 3\nobj.put(3,\"hiyo\")\nparam_1 = obj.get(2)\n#2, 4\nobj.put(4, \"wow\")",
+        "detail": "linked_list.meduim.146_LRU_Cache.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "param_1",
+        "kind": 5,
+        "importPath": "linked_list.meduim.146_LRU_Cache.Solution",
+        "description": "linked_list.meduim.146_LRU_Cache.Solution",
+        "peekOfCode": "param_1 = obj.get(2)\n#2, 4\nobj.put(4, \"wow\")",
         "detail": "linked_list.meduim.146_LRU_Cache.Solution",
         "documentation": {}
     },
@@ -1047,6 +1083,15 @@
         "description": "two_pointers.easy.125_Valid_Palindrome.Solution",
         "peekOfCode": "class Solution(object):\n    def isPalindrome(self, s):\n        text = s.lower()\n        length = len(text) \n        leftPointer = 0\n        rightPointer = length - 1\n        while leftPointer < rightPointer:\n            while (leftPointer < rightPointer) and not (text[leftPointer].isdigit() or text[leftPointer].isalpha()):\n                leftPointer += 1\n            while (leftPointer < rightPointer) and not (text[rightPointer].isdigit() or text[rightPointer].isalpha()):",
         "detail": "two_pointers.easy.125_Valid_Palindrome.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "two_pointers.easy.1984_Minimum_Difference_Between_Highest_and_Lowest_of_K_Scores.Solution",
+        "description": "two_pointers.easy.1984_Minimum_Difference_Between_Highest_and_Lowest_of_K_Scores.Solution",
+        "peekOfCode": "class Solution(object):\n    def minimumDifference(self, nums, k):\n        arr = sorted(nums)\n        l, r = 0, k - 1\n        diff = arr[len(arr) - 1] - arr[0]\n        while r < len(arr):\n            cur = arr[r] - arr[l]\n            print(cur)\n            diff = min(diff, cur)\n            r+=1",
+        "detail": "two_pointers.easy.1984_Minimum_Difference_Between_Highest_and_Lowest_of_K_Scores.Solution",
         "documentation": {}
     },
     {
