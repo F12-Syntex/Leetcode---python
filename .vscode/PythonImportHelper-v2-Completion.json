@@ -521,6 +521,33 @@
     {
         "label": "ListNode",
         "kind": 6,
+        "importPath": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "description": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + (str(self.next))\n        return res\nclass Solution(object):",
+        "detail": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "description": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "peekOfCode": "class Solution(object):\n    def reverseKGroup(self, head, k):\n        dummy = ListNode(0, head)\n        groupPrev = dummy\n        while True:\n            kth = self.getKthElement(groupPrev, k)\n            #the gruop does not exist, so lets just break out\n            if not kth:\n                break\n            groupNext = kth.next",
+        "detail": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist1",
+        "kind": 5,
+        "importPath": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "description": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "peekOfCode": "linkedlist1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().reverseKGroup(linkedlist1, 2))",
+        "detail": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
         "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
         "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
         "peekOfCode": "class ListNode(object):\n    def __init__(self, x, nxt=None, random=None):\n        self.val = int(x)\n        self.next = nxt\n        self.random = random\n    def __str__(self) -> str:\n        res = str(self.val) + \"(\" + str(self.random) + \")\"\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res",
