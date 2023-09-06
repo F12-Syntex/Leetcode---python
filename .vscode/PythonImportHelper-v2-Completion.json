@@ -861,6 +861,33 @@
         "documentation": {}
     },
     {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "description": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution(object):",
+        "detail": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "description": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "peekOfCode": "class Solution(object):\n    def splitListToParts(self, head, k):\n        length = 0\n        cur = head\n        dummy = head\n        node = dummy\n        while cur:\n            cur = cur.next\n            length+=1\n        res = []",
+        "detail": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist2",
+        "kind": 5,
+        "importPath": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "description": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "peekOfCode": "linkedlist2 = ListNode(1, ListNode(2, ListNode(3)))\nprint(Solution().splitListToParts(linkedlist2, 5))",
+        "detail": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "documentation": {}
+    },
+    {
         "label": "TreeNode",
         "kind": 6,
         "importPath": "path-finding.100. SameTree.Solution",
