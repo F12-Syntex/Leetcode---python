@@ -60,6 +60,14 @@
         "documentation": {}
     },
     {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Solution",
         "kind": 6,
         "importPath": "arrays_and_hashing.meduim.128_Longest_Consecutive_Sequence.Solution",
@@ -1178,6 +1186,69 @@
     {
         "label": "TreeNode",
         "kind": 6,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def isSameTree(self, p, q):\n        if not p and not q:\n            return True\n        if not p or not q or (p.val != q.val):\n            return False\n        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)\np = [1,2,3,4]\nq = [1,2,3]\n# Create TreeNode variables",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "p",
+        "kind": 5,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "p = [1,2,3,4]\nq = [1,2,3]\n# Create TreeNode variables\np_tree = TreeNode.build_tree(p, 0)\nq_tree = TreeNode.build_tree(q, 0)\n# Invert the binary tree\nsameTree = Solution().isSameTree(p_tree, q_tree)\nprint(sameTree)",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "q",
+        "kind": 5,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "q = [1,2,3]\n# Create TreeNode variables\np_tree = TreeNode.build_tree(p, 0)\nq_tree = TreeNode.build_tree(q, 0)\n# Invert the binary tree\nsameTree = Solution().isSameTree(p_tree, q_tree)\nprint(sameTree)",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "p_tree",
+        "kind": 5,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "p_tree = TreeNode.build_tree(p, 0)\nq_tree = TreeNode.build_tree(q, 0)\n# Invert the binary tree\nsameTree = Solution().isSameTree(p_tree, q_tree)\nprint(sameTree)",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "q_tree",
+        "kind": 5,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "q_tree = TreeNode.build_tree(q, 0)\n# Invert the binary tree\nsameTree = Solution().isSameTree(p_tree, q_tree)\nprint(sameTree)",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "sameTree = Solution().isSameTree(p_tree, q_tree)\nprint(sameTree)",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
         "importPath": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
         "description": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
         "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def pretty_print(self, level=0):\n        prefix = '    ' * level\n        print(prefix, self.val)",
@@ -1263,6 +1334,105 @@
         "description": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
         "peekOfCode": "maxDepth = Solution().maxDepth(root)\nprint(maxDepth)",
         "detail": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def pretty_print(self, level=0):\n        prefix = '    ' * level\n        print(prefix, self.val)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution2",
+        "kind": 6,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "class Solution2(object):\n    def isBalanced(self, root):\n        if not root:\n            return True\n        l = self.height(root.left)\n        r = self.height(root.right)\n        d = abs(l - r)\n        return d <= 1 and self.isBalanced(root.left) and self.isBalanced(root.right)\n    def height(self, root):\n        if not root:",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def isBalanced(self, root: Optional[TreeNode]) -> bool:\n        def explore(root):\n            if not root:\n                return [True, 0]\n            l = explore(root.left)\n            r = explore(root.right)\n            return [(l[0] and r[0] and (abs(l[1] - r[1]) <= 1)), 1 + max(l[1], r[1])] \n        return explore(root)[0]\n# Create the tree nodes",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root = TreeNode(1)\nroot.left = TreeNode(2)\nroot.right = TreeNode(2)\nroot.left.left = TreeNode(3)\nroot.right.right = TreeNode(3)\nroot.left.left.left = TreeNode(4)\nroot.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root.left = TreeNode(2)\nroot.right = TreeNode(2)\nroot.left.left = TreeNode(3)\nroot.right.right = TreeNode(3)\nroot.left.left.left = TreeNode(4)\nroot.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.right",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root.right = TreeNode(2)\nroot.left.left = TreeNode(3)\nroot.right.right = TreeNode(3)\nroot.left.left.left = TreeNode(4)\nroot.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left.left",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root.left.left = TreeNode(3)\nroot.right.right = TreeNode(3)\nroot.left.left.left = TreeNode(4)\nroot.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.right.right",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root.right.right = TreeNode(3)\nroot.left.left.left = TreeNode(4)\nroot.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left.left.left",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root.left.left.left = TreeNode(4)\nroot.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.right.right.right",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "tree",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "tree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
         "documentation": {}
     },
     {
@@ -1425,6 +1595,42 @@
         "description": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
         "peekOfCode": "res = Solution().diameterOfBinaryTree(root)\nprint(res)",
         "detail": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.boilerplate",
+        "description": "trees.boilerplate",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.boilerplate",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.boilerplate",
+        "description": "trees.boilerplate",
+        "peekOfCode": "class Solution(object):\n    def someMethod(self, root):\n        print(root)\n        return False\nroot = TreeNode.build_tree([1, 2, 3, 4, 5])\nsameTree = Solution().someMethod(root)\nprint(sameTree)",
+        "detail": "trees.boilerplate",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.boilerplate",
+        "description": "trees.boilerplate",
+        "peekOfCode": "root = TreeNode.build_tree([1, 2, 3, 4, 5])\nsameTree = Solution().someMethod(root)\nprint(sameTree)",
+        "detail": "trees.boilerplate",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.boilerplate",
+        "description": "trees.boilerplate",
+        "peekOfCode": "sameTree = Solution().someMethod(root)\nprint(sameTree)",
+        "detail": "trees.boilerplate",
         "documentation": {}
     },
     {
