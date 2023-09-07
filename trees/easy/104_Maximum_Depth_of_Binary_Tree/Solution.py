@@ -17,9 +17,7 @@ class TreeNode(object):
 
 class Solution(object):
     def maxDepth(self, root):
-        if root == None:
-            return 0
-        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
+        return 0 if not root else 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 
 # Create the binary tree with the values [4,2,7,1,3,6,9]
 root = TreeNode(4)
