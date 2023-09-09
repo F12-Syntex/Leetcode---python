@@ -70,6 +70,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "arrays_and_hashing.easy.66_Plus_One.Solution",
+        "description": "arrays_and_hashing.easy.66_Plus_One.Solution",
+        "peekOfCode": "class Solution(object):\n    def plusOne(self, digits):\n        for i in range(len(digits) - 1, -1, -1):\n            if digits[i] == 9:\n                digits[i] = 0\n                continue\n            else:\n                digits[i]+=1\n                return digits\n        digits[0] = 1",
+        "detail": "arrays_and_hashing.easy.66_Plus_One.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "arrays_and_hashing.meduim.128_Longest_Consecutive_Sequence.Solution",
         "description": "arrays_and_hashing.meduim.128_Longest_Consecutive_Sequence.Solution",
         "peekOfCode": "class Solution(object):\n    def longestConsecutive(self, nums):\n        hashset, maximum = set(nums), 0\n        for i in hashset:\n            if i-1 not in hashset:\n                sequence = 1\n                while (i+sequence) in hashset:\n                    sequence += 1\n                maximum = max(maximum, sequence)\n        return maximum",
@@ -1595,6 +1604,51 @@
         "description": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
         "peekOfCode": "res = Solution().diameterOfBinaryTree(root)\nprint(res)",
         "detail": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "description": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "description": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def isSubtree(self, root, subRoot):\n        print(root)\n        print(\"----\")\n        print(subRoot)\n        return False\nroot = TreeNode.build_tree([3,4,5,1,2])\nsubRoot = TreeNode.build_tree([4,1,2])\nsameTree = Solution().isSubtree(root, subRoot)\nprint(sameTree)",
+        "detail": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "description": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([3,4,5,1,2])\nsubRoot = TreeNode.build_tree([4,1,2])\nsameTree = Solution().isSubtree(root, subRoot)\nprint(sameTree)",
+        "detail": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "subRoot",
+        "kind": 5,
+        "importPath": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "description": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "peekOfCode": "subRoot = TreeNode.build_tree([4,1,2])\nsameTree = Solution().isSubtree(root, subRoot)\nprint(sameTree)",
+        "detail": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "description": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "peekOfCode": "sameTree = Solution().isSubtree(root, subRoot)\nprint(sameTree)",
+        "detail": "trees.easy.572_Subtree_of_Another_Tree.Solution",
         "documentation": {}
     },
     {
