@@ -79,6 +79,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "arrays_and_hashing.easy.67_Add_Binary.Solution",
+        "description": "arrays_and_hashing.easy.67_Add_Binary.Solution",
+        "peekOfCode": "class Solution(object):\n    def addBinary(self, a, b):\n        if len(a) < len(b):\n            a, b = b, a\n        res = \"\"\n        carry = 0\n        for i in range(len(a)):\n            bIndex = len(b) - i - 1\n            aIndex = len(a) - i - 1\n            ca = a[aIndex]",
+        "detail": "arrays_and_hashing.easy.67_Add_Binary.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "arrays_and_hashing.meduim.128_Longest_Consecutive_Sequence.Solution",
         "description": "arrays_and_hashing.meduim.128_Longest_Consecutive_Sequence.Solution",
         "peekOfCode": "class Solution(object):\n    def longestConsecutive(self, nums):\n        hashset, maximum = set(nums), 0\n        for i in hashset:\n            if i-1 not in hashset:\n                sequence = 1\n                while (i+sequence) in hashset:\n                    sequence += 1\n                maximum = max(maximum, sequence)\n        return maximum",
