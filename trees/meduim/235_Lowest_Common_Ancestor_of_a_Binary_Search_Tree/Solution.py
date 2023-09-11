@@ -1,4 +1,3 @@
-
 class TreeNode(object):
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -33,32 +32,9 @@ class TreeNode(object):
     
 
 class Solution(object):
-    def isSubtree(self, root, subRoot):
+    def lowestCommonAncestor(self, root, p, q):
+        print(root)
 
-        if not root:
-            return False
-
-        if self.isSameTree(root, subRoot):
-            return True
-
-        return self.isSubtree(root.right, subRoot) or self.isSubtree(root.left, subRoot)
-
-    def isSameTree(self, root, root2):
-
-        if not root and not root2:
-            return True
-        
-        if not root or not root2:
-            return False
-        
-        if root.val != root2.val:
-            return False
-
-        return self.isSameTree(root.left, root2.left) and self.isSameTree(root.right, root2.right)
-
-root = TreeNode.build_tree([3,4,5,1,2])
-subRoot = TreeNode.build_tree([4,1,2])
-
-sameTree = Solution().isSubtree(root, subRoot)
-print(sameTree)
+root = TreeNode.build_tree([6,2,8,0,4,7,9,None,None,3,5])
+sameTree = Solution().lowestCommonAncestor(root, 2, 8)
 

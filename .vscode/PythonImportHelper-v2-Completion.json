@@ -1647,7 +1647,7 @@
         "kind": 6,
         "importPath": "trees.easy.572_Subtree_of_Another_Tree.Solution",
         "description": "trees.easy.572_Subtree_of_Another_Tree.Solution",
-        "peekOfCode": "class Solution(object):\n    def isSubtree(self, root, subRoot):\n        print(root)\n        print(\"----\")\n        print(subRoot)\n        return False\nroot = TreeNode.build_tree([3,4,5,1,2])\nsubRoot = TreeNode.build_tree([4,1,2])\nsameTree = Solution().isSubtree(root, subRoot)\nprint(sameTree)",
+        "peekOfCode": "class Solution(object):\n    def isSubtree(self, root, subRoot):\n        if not root:\n            return False\n        if self.isSameTree(root, subRoot):\n            return True\n        return self.isSubtree(root.right, subRoot) or self.isSubtree(root.left, subRoot)\n    def isSameTree(self, root, root2):\n        if not root and not root2:\n            return True",
         "detail": "trees.easy.572_Subtree_of_Another_Tree.Solution",
         "documentation": {}
     },
@@ -1676,6 +1676,42 @@
         "description": "trees.easy.572_Subtree_of_Another_Tree.Solution",
         "peekOfCode": "sameTree = Solution().isSubtree(root, subRoot)\nprint(sameTree)",
         "detail": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "description": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "description": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def lowestCommonAncestor(self, root, p, q):\n        print(root)\nroot = TreeNode.build_tree([6,2,8,0,4,7,9,None,None,3,5])\nsameTree = Solution().lowestCommonAncestor(root, 2, 8)",
+        "detail": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "description": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([6,2,8,0,4,7,9,None,None,3,5])\nsameTree = Solution().lowestCommonAncestor(root, 2, 8)",
+        "detail": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "description": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "peekOfCode": "sameTree = Solution().lowestCommonAncestor(root, 2, 8)",
+        "detail": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
         "documentation": {}
     },
     {
