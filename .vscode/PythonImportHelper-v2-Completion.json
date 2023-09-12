@@ -1692,7 +1692,7 @@
         "kind": 6,
         "importPath": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
         "description": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
-        "peekOfCode": "class Solution(object):\n    def lowestCommonAncestor(self, root, p, q):\n        print(root)\nroot = TreeNode.build_tree([6,2,8,0,4,7,9,None,None,3,5])\nsameTree = Solution().lowestCommonAncestor(root, 2, 8)",
+        "peekOfCode": "class Solution(object):\n    def lowestCommonAncestor(self, root, p, q):\n        cur = root\n        while cur:\n            if p.val < cur.val and q.val < cur.val:\n                cur = cur.left\n            elif p.val > cur.val and q.val > cur.val:\n                cur = cur.right\n            else:\n                return cur",
         "detail": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
         "documentation": {}
     },

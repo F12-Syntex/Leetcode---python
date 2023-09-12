@@ -33,7 +33,14 @@ class TreeNode(object):
 
 class Solution(object):
     def lowestCommonAncestor(self, root, p, q):
-        print(root)
+        cur = root
+        while cur:
+            if p.val < cur.val and q.val < cur.val:
+                cur = cur.left
+            elif p.val > cur.val and q.val > cur.val:
+                cur = cur.right
+            else:
+                return cur
 
 root = TreeNode.build_tree([6,2,8,0,4,7,9,None,None,3,5])
 sameTree = Solution().lowestCommonAncestor(root, 2, 8)
