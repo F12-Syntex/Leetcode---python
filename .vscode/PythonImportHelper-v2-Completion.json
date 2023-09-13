@@ -1681,6 +1681,42 @@
     {
         "label": "TreeNode",
         "kind": 6,
+        "importPath": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "description": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "description": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "peekOfCode": "class Solution(object):\n    def levelOrder(self, root):\n        q = collections.deque()\n        res = []\n        q.append(root)\n        while q:\n            length = len(q)\n            level = []\n            for i in range(length):\n                cur = q.popleft()",
+        "detail": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "description": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([1, 2, 3, 4, 5])\nsameTree = Solution().levelOrder(root)\nprint(sameTree)",
+        "detail": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "description": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "peekOfCode": "sameTree = Solution().levelOrder(root)\nprint(sameTree)",
+        "detail": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
         "importPath": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
         "description": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
         "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
