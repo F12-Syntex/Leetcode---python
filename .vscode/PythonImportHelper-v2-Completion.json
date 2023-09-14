@@ -1717,6 +1717,42 @@
     {
         "label": "TreeNode",
         "kind": 6,
+        "importPath": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "description": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "description": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "peekOfCode": "class Solution(object):\n    def rightSideView(self, root):\n        res = []\n        queue = collections.deque()\n        queue.append(root)\n        level = 1\n        while queue:\n            length = len(queue)\n            level = []\n            for i in range(length):",
+        "detail": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "description": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([1,2,3,4])\nsameTree = Solution().rightSideView(root)\nprint(sameTree)",
+        "detail": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "description": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "peekOfCode": "sameTree = Solution().rightSideView(root)\nprint(sameTree)",
+        "detail": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
         "importPath": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
         "description": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
         "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
