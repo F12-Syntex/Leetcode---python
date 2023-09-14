@@ -1728,7 +1728,7 @@
         "kind": 6,
         "importPath": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
         "description": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
-        "peekOfCode": "class Solution(object):\n    def rightSideView(self, root):\n        res = []\n        queue = collections.deque()\n        queue.append(root)\n        level = 1\n        while queue:\n            length = len(queue)\n            level = []\n            for i in range(length):",
+        "peekOfCode": "class Solution(object):\n    def rightSideView(self, root):\n        res = []\n        queue = collections.deque()\n        queue.append(root)\n        level = 1\n        while queue:\n            length = len(queue)\n            last = 0\n            for i in range(length):",
         "detail": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
         "documentation": {}
     },

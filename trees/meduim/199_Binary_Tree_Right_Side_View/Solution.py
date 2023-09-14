@@ -42,20 +42,20 @@ class Solution(object):
         level = 1
         while queue:
             length = len(queue)
-
-            level = []
+            last = 0
+            
             for i in range(length):
                 cur = queue.popleft()
 
                 if not cur:
                     continue
 
-                level.append(cur.val)
+                last = cur.val
+
                 queue.append(cur.left)
                 queue.append(cur.right)
                 
-            if(len(level) > 0):
-                res.append(level[-1])
+            res.append(last[0])
 
         return res
 
