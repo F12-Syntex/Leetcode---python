@@ -1717,6 +1717,42 @@
     {
         "label": "TreeNode",
         "kind": 6,
+        "importPath": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "description": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "description": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def goodNodes(self, root):\n        #explore all paths, passing in the current max val for each exploration\n        def dfs(node, maxVal):\n            #if the node is none, then return 0 as an empty node cannot have any good nodes\n            if not node:\n                return 0\n            #start counting the number of good nodes starting from this node\n            #we start with 1 if the current node is a good node\n            goodNodes = 1 if node.val >= maxVal else 0",
+        "detail": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "description": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([3,1,4,3,None,1,5])\nsameTree = Solution().goodNodes(root)\nprint(sameTree)",
+        "detail": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "description": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "peekOfCode": "sameTree = Solution().goodNodes(root)\nprint(sameTree)",
+        "detail": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
         "importPath": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
         "description": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
         "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
@@ -1800,7 +1836,16 @@
         "kind": 6,
         "importPath": "trees.boilerplate",
         "description": "trees.boilerplate",
-        "peekOfCode": "class Solution(object):\n    def someMethod(self, root):\n        print(root)\n        return False\nroot = TreeNode.build_tree([1, 2, 3, 4, 5])\nsameTree = Solution().someMethod(root)\nprint(sameTree)",
+        "peekOfCode": "class Solution(object):\n    def someMethod(self, root):\n        print(root)\n        return False\nnull = None\nroot = TreeNode.build_tree([1, 2, 3, 4, 5])\nsameTree = Solution().someMethod(root)\nprint(sameTree)",
+        "detail": "trees.boilerplate",
+        "documentation": {}
+    },
+    {
+        "label": "null",
+        "kind": 5,
+        "importPath": "trees.boilerplate",
+        "description": "trees.boilerplate",
+        "peekOfCode": "null = None\nroot = TreeNode.build_tree([1, 2, 3, 4, 5])\nsameTree = Solution().someMethod(root)\nprint(sameTree)",
         "detail": "trees.boilerplate",
         "documentation": {}
     },

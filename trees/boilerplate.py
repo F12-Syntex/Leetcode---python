@@ -36,6 +36,7 @@ class Solution(object):
         print(root)
         return False
 
+null = None
 root = TreeNode.build_tree([1, 2, 3, 4, 5])
 sameTree = Solution().someMethod(root)
 print(sameTree)
