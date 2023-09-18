@@ -1789,6 +1789,51 @@
     {
         "label": "TreeNode",
         "kind": 6,
+        "importPath": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "description": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "description": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "peekOfCode": "class Solution(object):\n    def kthSmallest(self, root, k):\n        stack = []\n        cur = root\n        nth = 0\n        while cur or stack:\n            #go as far left as possible\n            while cur:\n                stack.append(cur)\n                cur = cur.left",
+        "detail": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "null",
+        "kind": 5,
+        "importPath": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "description": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "peekOfCode": "null = None\nroot = TreeNode.build_tree([3,1,4,None,2])\nsameTree = Solution().kthSmallest(root, 3)\nprint(sameTree)",
+        "detail": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "description": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([3,1,4,None,2])\nsameTree = Solution().kthSmallest(root, 3)\nprint(sameTree)",
+        "detail": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "description": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "peekOfCode": "sameTree = Solution().kthSmallest(root, 3)\nprint(sameTree)",
+        "detail": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
         "importPath": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
         "description": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
         "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
