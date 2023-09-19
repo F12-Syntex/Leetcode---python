@@ -1474,6 +1474,42 @@
     {
         "label": "TreeNode",
         "kind": 6,
+        "importPath": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def minDepth(self, root):\n        if not root:\n            return 0\n        self.depth = float('inf')\n        def dfs(node, curDepth):\n            if not node:\n                return\n            if not node.left and not node.right:\n                self.depth = min(self.depth, curDepth + 1)",
+        "detail": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([2,None,3,None,4,None,5,None,6])\nsameTree = Solution().minDepth(root)\nprint(sameTree)",
+        "detail": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "sameTree = Solution().minDepth(root)\nprint(sameTree)",
+        "detail": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
         "importPath": "trees.easy.226_Invert_Binary_Tree.Solution",
         "description": "trees.easy.226_Invert_Binary_Tree.Solution",
         "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def pretty_print(self, level=0):\n        prefix = '    ' * level\n        print(prefix, self.val)",
