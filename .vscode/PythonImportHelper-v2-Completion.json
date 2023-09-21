@@ -1508,6 +1508,15 @@
         "documentation": {}
     },
     {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.easy.145_Binary_Tree_Postorder_Traversal.Solution",
+        "description": "trees.easy.145_Binary_Tree_Postorder_Traversal.Solution",
+        "peekOfCode": "class Solution(object):\n    def postorderTraversal(self, root):\n        arr = []\n        def dfs(node):\n            if node:\n                dfs(node.left)\n                dfs(node.right)\n                arr.append(node.val)\n        dfs(root)\n        return arr",
+        "detail": "trees.easy.145_Binary_Tree_Postorder_Traversal.Solution",
+        "documentation": {}
+    },
+    {
         "label": "TreeNode",
         "kind": 6,
         "importPath": "trees.easy.226_Invert_Binary_Tree.Solution",
@@ -1748,6 +1757,42 @@
         "description": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
         "peekOfCode": "sameTree = Solution().levelOrder(root)\nprint(sameTree)",
         "detail": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "description": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "description": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "peekOfCode": "class Solution(object):\n    def buildTree(self, preorder, inorder):\n        if not preorder or not inorder:\n            return None\n        #the first value in the preorder array is always going to be the head of the tree\n        root = TreeNode(preorder[0])\n        #find the index of the root in the in order array, we do this because all values to the left of the root\n        #will be in the left subtree, and all values in the right of root will be in the right subtree\n        #that's how inorder traversal works, left < node > right\n        mid = inorder.index(preorder[0])",
+        "detail": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "null",
+        "kind": 5,
+        "importPath": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "description": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "peekOfCode": "null = None\nsameTree = Solution().buildTree([3,9,20,15,7], [9,3,15,20,7])\nprint(sameTree)",
+        "detail": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "description": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "peekOfCode": "sameTree = Solution().buildTree([3,9,20,15,7], [9,3,15,20,7])\nprint(sameTree)",
+        "detail": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
         "documentation": {}
     },
     {
