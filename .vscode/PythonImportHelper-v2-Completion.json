@@ -1724,6 +1724,15 @@
         "documentation": {}
     },
     {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.hard.124_Binary_Tree_Maximum_Path_Sum.Solution",
+        "description": "trees.hard.124_Binary_Tree_Maximum_Path_Sum.Solution",
+        "peekOfCode": "class Solution(object):\n    def maxPathSum(self, root):\n        res = [root.val]\n        def dfs(node):\n            if not node:\n                return 0\n            maxLeft = max(0, dfs(node.left))\n            maxRight = max(0, dfs(node.right))\n            #calculate max with split\n            route = node.val + maxLeft + maxRight",
+        "detail": "trees.hard.124_Binary_Tree_Maximum_Path_Sum.Solution",
+        "documentation": {}
+    },
+    {
         "label": "TreeNode",
         "kind": 6,
         "importPath": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
