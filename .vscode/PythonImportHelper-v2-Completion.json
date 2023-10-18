@@ -340,6 +340,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "dp.meduim.78. Subsets.Solution",
+        "description": "dp.meduim.78. Subsets.Solution",
+        "peekOfCode": "class Solution:\n    def subsets(self, nums):\n        res = []\n        subsets = []\n        def dfs(index):\n            if index >= len(nums):\n                res.append(subsets.copy())\n                return\n            subsets.append(nums[index])\n            dfs(index + 1)",
+        "detail": "dp.meduim.78. Subsets.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "dp.meduim.894_All_Possible_Full_Binary_Trees.Solution",
         "description": "dp.meduim.894_All_Possible_Full_Binary_Trees.Solution",
         "peekOfCode": "class Solution(object):\n    def allPossibleFBT(self, n):\n        #remember prev calculations\n        cache = {\n            0 : [],\n            1 : [TreeNode()]\n        }\n        #explore a given noumber of nodes\n        def explore(n):\n            #no full binary trees can be produced with an even number of nodes",
