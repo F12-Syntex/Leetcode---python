@@ -340,6 +340,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "dp.meduim.39. Combination Sum.Solution",
+        "description": "dp.meduim.39. Combination Sum.Solution",
+        "peekOfCode": "class Solution:\n    def combinationSum(self, candidates, target):\n        res = []\n        permutation = []\n        def dfs(index):\n            if index >= len(candidates) or sum(permutation) >= target:\n                if(sum(permutation) == target):\n                    res.append(permutation.copy())\n                return\n            permutation.append(candidates[index])",
+        "detail": "dp.meduim.39. Combination Sum.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "dp.meduim.78. Subsets.Solution",
         "description": "dp.meduim.78. Subsets.Solution",
         "peekOfCode": "class Solution:\n    def subsets(self, nums):\n        res = []\n        subsets = []\n        def dfs(index):\n            if index >= len(nums):\n                res.append(subsets.copy())\n                return\n            subsets.append(nums[index])\n            dfs(index + 1)",
