@@ -349,6 +349,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "dp.meduim.46. Permutations.Solution",
+        "description": "dp.meduim.46. Permutations.Solution",
+        "peekOfCode": "class Solution(object):\n    def permute(self, nums):\n        #store all the results\n        res = []\n        #base case, check if the length is one, in which case the permutations are just the node itself\n        if len(nums) == 1:\n            return [nums[:]]\n        #go through ever element in nums, and find the permutation if we take one elements out\n        for i in range(len(nums)):\n            #pop the first element and find all the permutations if we ignore this number",
+        "detail": "dp.meduim.46. Permutations.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "dp.meduim.78. Subsets.Solution",
         "description": "dp.meduim.78. Subsets.Solution",
         "peekOfCode": "class Solution:\n    def subsets(self, nums):\n        res = []\n        subsets = []\n        def dfs(index):\n            if index >= len(nums):\n                res.append(subsets.copy())\n                return\n            subsets.append(nums[index])\n            dfs(index + 1)",
