@@ -26,6 +26,15 @@
         "documentation": {}
     },
     {
+        "label": "collections",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "collections",
+        "description": "collections",
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
         "label": "defaultdict",
         "importPath": "collections",
         "description": "collections",
@@ -66,6 +75,33 @@
         "importPath": "leetscrape",
         "description": "leetscrape",
         "detail": "leetscrape",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "arrays_and_hashing.easy.66_Plus_One.Solution",
+        "description": "arrays_and_hashing.easy.66_Plus_One.Solution",
+        "peekOfCode": "class Solution(object):\n    def plusOne(self, digits):\n        for i in range(len(digits) - 1, -1, -1):\n            if digits[i] == 9:\n                digits[i] = 0\n                continue\n            else:\n                digits[i]+=1\n                return digits\n        digits[0] = 1",
+        "detail": "arrays_and_hashing.easy.66_Plus_One.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "arrays_and_hashing.easy.67_Add_Binary.Solution",
+        "description": "arrays_and_hashing.easy.67_Add_Binary.Solution",
+        "peekOfCode": "class Solution(object):\n    def addBinary(self, a, b):\n        if len(a) < len(b):\n            a, b = b, a\n        res = \"\"\n        carry = 0\n        for i in range(len(a)):\n            bIndex = len(b) - i - 1\n            aIndex = len(a) - i - 1\n            ca = a[aIndex]",
+        "detail": "arrays_and_hashing.easy.67_Add_Binary.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "value",
+        "kind": 5,
+        "importPath": "arrays_and_hashing.easy.67_Add_Binary.test",
+        "description": "arrays_and_hashing.easy.67_Add_Binary.test",
+        "peekOfCode": "value = 1*3.23*34.1\nprint('4.81:', value * 4.81)\nprint('4.91:', value * 4.91)",
+        "detail": "arrays_and_hashing.easy.67_Add_Binary.test",
         "documentation": {}
     },
     {
@@ -314,6 +350,42 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "dp.meduim.39. Combination Sum.Solution",
+        "description": "dp.meduim.39. Combination Sum.Solution",
+        "peekOfCode": "class Solution:\n    def combinationSum(self, candidates, target):\n        res = []\n        permutation = []\n        def dfs(index):\n            if index >= len(candidates) or sum(permutation) >= target:\n                if(sum(permutation) == target):\n                    res.append(permutation.copy())\n                return\n            permutation.append(candidates[index])",
+        "detail": "dp.meduim.39. Combination Sum.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "dp.meduim.46. Permutations.Solution",
+        "description": "dp.meduim.46. Permutations.Solution",
+        "peekOfCode": "class Solution(object):\n    def permute(self, nums):\n        #store all the results\n        res = []\n        #base case, check if the length is one, in which case the permutations are just the node itself\n        if len(nums) == 1:\n            return [nums[:]]\n        #go through ever element in nums, and find the permutation if we take one elements out\n        for i in range(len(nums)):\n            #pop the first element and find all the permutations if we ignore this number",
+        "detail": "dp.meduim.46. Permutations.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "dp.meduim.47. Permutations II.Solution",
+        "description": "dp.meduim.47. Permutations II.Solution",
+        "peekOfCode": "class Solution(object):\n    def permute(self, nums):\n        #store all the results\n        res = []\n        #base case, check if the length is one, in which case the permutations are just the node itself\n        if len(nums) == 1:\n            return [nums[:]]\n        #go through ever element in nums, and find the permutation if we take one elements out\n        for i in range(len(nums)):\n            #pop the first element and find all the permutations if we ignore this number",
+        "detail": "dp.meduim.47. Permutations II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "dp.meduim.78. Subsets.Solution",
+        "description": "dp.meduim.78. Subsets.Solution",
+        "peekOfCode": "class Solution:\n    def subsets(self, nums):\n        res = []\n        subsets = []\n        def dfs(index):\n            if index >= len(nums):\n                res.append(subsets.copy())\n                return\n            subsets.append(nums[index])\n            dfs(index + 1)",
+        "detail": "dp.meduim.78. Subsets.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "dp.meduim.894_All_Possible_Full_Binary_Trees.Solution",
         "description": "dp.meduim.894_All_Possible_Full_Binary_Trees.Solution",
         "peekOfCode": "class Solution(object):\n    def allPossibleFBT(self, n):\n        #remember prev calculations\n        cache = {\n            0 : [],\n            1 : [TreeNode()]\n        }\n        #explore a given noumber of nodes\n        def explore(n):\n            #no full binary trees can be produced with an even number of nodes",
@@ -336,6 +408,573 @@
         "description": "dp.meduim.894_All_Possible_Full_Binary_Trees.TreeNode",
         "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __str__(self):\n        return str(self.preorder(self))\n    def preorder(self, node):\n        if node is None:\n            return \"None\"",
         "detail": "dp.meduim.894_All_Possible_Full_Binary_Trees.TreeNode",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + (str(self.next.val) if self.next else \"None\")\n        return res\nclass Solution(object):",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "class Solution(object):\n    def hasCycle2(self, head):\n        mapping = {}\n        index = 0\n        while head:\n            if head.next in mapping:\n                return mapping[head.next]\n            mapping[head] = index\n            head = head.next\n            index += 1 ",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node4",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node4 = ListNode(-4)\nnode3 = ListNode(0)\nnode2 = ListNode(2)\nnode1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node3",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node3 = ListNode(0)\nnode2 = ListNode(2)\nnode1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node2",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node2 = ListNode(2)\nnode1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node1",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node1.next",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node1.next = node2\nnode2.next = node3\nnode3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node2.next",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node2.next = node3\nnode3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node3.next",
+        "kind": 5,
+        "importPath": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "description": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "peekOfCode": "node3.next = node4\n# node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.easy.141_Linked_List_Cycle.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.easy.206_Reverse_Linked_List.Solution",
+        "description": "linked_list.easy.206_Reverse_Linked_List.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution(object):",
+        "detail": "linked_list.easy.206_Reverse_Linked_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.easy.206_Reverse_Linked_List.Solution",
+        "description": "linked_list.easy.206_Reverse_Linked_List.Solution",
+        "peekOfCode": "class Solution(object):\n    def reverseList(self, head):\n        curr, prev = head, None\n        while curr:\n            #save the next list to explore\n            nxt = curr.next\n            #set the current val's next to the prev node\n            curr.next = prev\n            #set the new prev to explore, which is the curr nodes minus the curr value\n            prev = curr",
+        "detail": "linked_list.easy.206_Reverse_Linked_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist",
+        "kind": 5,
+        "importPath": "linked_list.easy.206_Reverse_Linked_List.Solution",
+        "description": "linked_list.easy.206_Reverse_Linked_List.Solution",
+        "peekOfCode": "linkedlist = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().reverseList(linkedlist))",
+        "detail": "linked_list.easy.206_Reverse_Linked_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
+        "description": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution():",
+        "detail": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
+        "description": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
+        "peekOfCode": "class Solution():\n    def mergeTwoLists(self, list1, list2):\n        root = ListNode()\n        tail = root\n        while list1 and list2:\n            if list1.val < list2.val:\n                tail.next = list1\n                list1 = list1.next\n            else:\n                tail.next = list2",
+        "detail": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist1",
+        "kind": 5,
+        "importPath": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
+        "description": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
+        "peekOfCode": "linkedlist1 = ListNode(1, ListNode(2, ListNode(4)))\nlinkedlist2 = ListNode(1, ListNode(3, ListNode(4)))\nprint(Solution().mergeTwoLists(linkedlist1, linkedlist2))",
+        "detail": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist2",
+        "kind": 5,
+        "importPath": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
+        "description": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
+        "peekOfCode": "linkedlist2 = ListNode(1, ListNode(3, ListNode(4)))\nprint(Solution().mergeTwoLists(linkedlist1, linkedlist2))",
+        "detail": "linked_list.easy.21_Merge_Two_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.easy.83_Remove_Duplicates_from_Sorted_List.Solution",
+        "description": "linked_list.easy.83_Remove_Duplicates_from_Sorted_List.Solution",
+        "peekOfCode": "class Solution(object):\n    def deleteDuplicates(self, head):\n        cur = head\n        prev = None\n        while cur:\n            nxt = cur.next\n            if prev and cur.val == prev.val:\n                self.removeNode(cur, prev)\n            else:\n                prev = cur",
+        "detail": "linked_list.easy.83_Remove_Duplicates_from_Sorted_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "description": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + (str(self.next))\n        return res\nclass Solution(object):",
+        "detail": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "description": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "peekOfCode": "class Solution(object):\n    def mergeKLists(self, lists):\n        #check if the lists are valid\n        if not lists and len(lists) == 0:\n            return None\n        #we will do a merge sort sorting two ll at a time\n        while len(lists) > 1:\n            currentlySorted = []\n            for i in range(0, len(lists), 2):\n                list1 = lists[i]",
+        "detail": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist1",
+        "kind": 5,
+        "importPath": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "description": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "peekOfCode": "linkedlist1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nlinkedlist2 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nlinkedlist3 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().mergeKLists([linkedlist1, linkedlist2, linkedlist3]))\n# print(Solution().mergeTwoLists(linkedlist1, linkedlist2))",
+        "detail": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist2",
+        "kind": 5,
+        "importPath": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "description": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "peekOfCode": "linkedlist2 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nlinkedlist3 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().mergeKLists([linkedlist1, linkedlist2, linkedlist3]))\n# print(Solution().mergeTwoLists(linkedlist1, linkedlist2))",
+        "detail": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist3",
+        "kind": 5,
+        "importPath": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "description": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "peekOfCode": "linkedlist3 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().mergeKLists([linkedlist1, linkedlist2, linkedlist3]))\n# print(Solution().mergeTwoLists(linkedlist1, linkedlist2))",
+        "detail": "linked_list.hard.23_Merge_k_Sorted_Lists.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "description": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + (str(self.next))\n        return res\nclass Solution(object):",
+        "detail": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "description": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "peekOfCode": "class Solution(object):\n    def reverseKGroup(self, head, k):\n        dummy = ListNode(0, head)\n        groupPrev = dummy\n        while True:\n            kth = self.getKthElement(groupPrev, k)\n            #the gruop does not exist, so lets just break out\n            if not kth:\n                break\n            groupNext = kth.next",
+        "detail": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist1",
+        "kind": 5,
+        "importPath": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "description": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "peekOfCode": "linkedlist1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().reverseKGroup(linkedlist1, 2))",
+        "detail": "linked_list.hard.25_Reverse_Nodes_in_k-Group.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, x, nxt=None, random=None):\n        self.val = int(x)\n        self.next = nxt\n        self.random = random\n    def __str__(self) -> str:\n        res = str(self.val) + \"(\" + str(self.random) + \")\"\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "class Solution(object):\n    def copyRandomList(self, head):\n        #map all the nodes\n        mapping = {\n            None : None\n        }\n        curr = head\n        while curr:\n            mapping[curr] = ListNode(curr.val)\n            curr = curr.next",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node5",
+        "kind": 5,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "node5 = ListNode(1, None, None)\nnode4 = ListNode(10, node5, node5)\nnode3 = ListNode(11, node4, node5)\nnode2 = ListNode(13, node3, node4)\nnode1 = ListNode(7, node2, node3)\nprint(Solution().copyRandomList(node1))",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node4",
+        "kind": 5,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "node4 = ListNode(10, node5, node5)\nnode3 = ListNode(11, node4, node5)\nnode2 = ListNode(13, node3, node4)\nnode1 = ListNode(7, node2, node3)\nprint(Solution().copyRandomList(node1))",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node3",
+        "kind": 5,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "node3 = ListNode(11, node4, node5)\nnode2 = ListNode(13, node3, node4)\nnode1 = ListNode(7, node2, node3)\nprint(Solution().copyRandomList(node1))",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node2",
+        "kind": 5,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "node2 = ListNode(13, node3, node4)\nnode1 = ListNode(7, node2, node3)\nprint(Solution().copyRandomList(node1))",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node1",
+        "kind": 5,
+        "importPath": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "description": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "peekOfCode": "node1 = ListNode(7, node2, node3)\nprint(Solution().copyRandomList(node1))",
+        "detail": "linked_list.meduim.138_Copy_List_with_Random_Pointer.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + (str(self.next.val) if self.next else \"None\")\n        return res\nclass Solution(object):",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "class Solution(object):\n    def hasCycle(self, head):\n        mapping = set()\n        while head:\n            if head.next in mapping:\n                return head.next\n            mapping.add(head)\n            head = head.next\n        return None\nnode4 = ListNode(-4)",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node4",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node4 = ListNode(-4)\nnode3 = ListNode(0)\nnode2 = ListNode(2)\nnode1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node3",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node3 = ListNode(0)\nnode2 = ListNode(2)\nnode1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node2",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node2 = ListNode(2)\nnode1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node1",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node1 = ListNode(3)\nnode1.next = node2\nnode2.next = node3\nnode3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node1.next",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node1.next = node2\nnode2.next = node3\nnode3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node2.next",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node2.next = node3\nnode3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node3.next",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node3.next = node4\nnode4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "node4.next",
+        "kind": 5,
+        "importPath": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "description": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "peekOfCode": "node4.next = node2\nprint(Solution().hasCycle(node1))",
+        "detail": "linked_list.meduim.142_Linked_List_Cycle_II.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.meduim.143_Reorder_List.Solution",
+        "description": "linked_list.meduim.143_Reorder_List.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution(object):",
+        "detail": "linked_list.meduim.143_Reorder_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.143_Reorder_List.Solution",
+        "description": "linked_list.meduim.143_Reorder_List.Solution",
+        "peekOfCode": "class Solution(object):\n    def reorderList(self, head):\n        s, f = head, head.next\n        #partition\n        while f and f.next:\n            s = s.next\n            f = f.next.next\n        p1 = head\n        p2 = s.next\n        s.next = prev = None",
+        "detail": "linked_list.meduim.143_Reorder_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist",
+        "kind": 5,
+        "importPath": "linked_list.meduim.143_Reorder_List.Solution",
+        "description": "linked_list.meduim.143_Reorder_List.Solution",
+        "peekOfCode": "linkedlist = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().reorderList(linkedlist))",
+        "detail": "linked_list.meduim.143_Reorder_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "DoublyListNode",
+        "kind": 6,
+        "importPath": "linked_list.meduim.146_LRU_Cache.Solution",
+        "description": "linked_list.meduim.146_LRU_Cache.Solution",
+        "peekOfCode": "class DoublyListNode(object):\n    def __init__(self, key, val):\n        self.key, self.val = key, val\n        self.next = self.prev = None\nclass LRUCache(object):\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.cache = {}\n        self.head = DoublyListNode(0, 0)\n        self.tail = DoublyListNode(0, 0)        ",
+        "detail": "linked_list.meduim.146_LRU_Cache.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "LRUCache",
+        "kind": 6,
+        "importPath": "linked_list.meduim.146_LRU_Cache.Solution",
+        "description": "linked_list.meduim.146_LRU_Cache.Solution",
+        "peekOfCode": "class LRUCache(object):\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.cache = {}\n        self.head = DoublyListNode(0, 0)\n        self.tail = DoublyListNode(0, 0)        \n    #remove the node from the dll\n    def remove(self, node):\n        if node.key not in self.cache:\n            return ",
+        "detail": "linked_list.meduim.146_LRU_Cache.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "obj",
+        "kind": 5,
+        "importPath": "linked_list.meduim.146_LRU_Cache.Solution",
+        "description": "linked_list.meduim.146_LRU_Cache.Solution",
+        "peekOfCode": "obj = LRUCache(2)\nobj.put(1, \"hi\")\nobj.put(2, \"hey\")\n#2, 1\nparam_1 = obj.get(2)\n#2, 3\nobj.put(3,\"hiyo\")\nparam_1 = obj.get(2)\n#2, 4\nobj.put(4, \"wow\")",
+        "detail": "linked_list.meduim.146_LRU_Cache.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "param_1",
+        "kind": 5,
+        "importPath": "linked_list.meduim.146_LRU_Cache.Solution",
+        "description": "linked_list.meduim.146_LRU_Cache.Solution",
+        "peekOfCode": "param_1 = obj.get(2)\n#2, 3\nobj.put(3,\"hiyo\")\nparam_1 = obj.get(2)\n#2, 4\nobj.put(4, \"wow\")",
+        "detail": "linked_list.meduim.146_LRU_Cache.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "param_1",
+        "kind": 5,
+        "importPath": "linked_list.meduim.146_LRU_Cache.Solution",
+        "description": "linked_list.meduim.146_LRU_Cache.Solution",
+        "peekOfCode": "param_1 = obj.get(2)\n#2, 4\nobj.put(4, \"wow\")",
+        "detail": "linked_list.meduim.146_LRU_Cache.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "description": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution(object):",
+        "detail": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "description": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "peekOfCode": "class Solution(object):\n    def removeNthFromEnd(self, head, n):\n        dummy = ListNode(0, head)\n        l = dummy\n        r = head\n        for i in range(n):\n            r = r.next\n        while r:\n            l = l.next\n            r = r.next",
+        "detail": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist1",
+        "kind": 5,
+        "importPath": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "description": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "peekOfCode": "linkedlist1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nlinkedlist2 = ListNode(1)\nlinkedlist3 = ListNode(1, 2)\nSolution().removeNthFromEnd(linkedlist1, 2)",
+        "detail": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist2",
+        "kind": 5,
+        "importPath": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "description": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "peekOfCode": "linkedlist2 = ListNode(1)\nlinkedlist3 = ListNode(1, 2)\nSolution().removeNthFromEnd(linkedlist1, 2)",
+        "detail": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist3",
+        "kind": 5,
+        "importPath": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "description": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "peekOfCode": "linkedlist3 = ListNode(1, 2)\nSolution().removeNthFromEnd(linkedlist1, 2)",
+        "detail": "linked_list.meduim.19_Remove_Nth_Node_From_End_of_List.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.287_Find_the_Duplicate_Number.Solution",
+        "description": "linked_list.meduim.287_Find_the_Duplicate_Number.Solution",
+        "peekOfCode": "class Solution(object):\n    def findDuplicate(self, nums):\n        #find collision\n        s, f = 0, 0\n        while s != f or s == 0:\n            #s.next\n            s = nums[s]\n            #f.next.next\n            f = nums[f] \n            f = nums[f]",
+        "detail": "linked_list.meduim.287_Find_the_Duplicate_Number.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "description": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution(object):",
+        "detail": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "description": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "peekOfCode": "class Solution(object):\n    def addTwoNumbersSol1(self, l1, l2):\n        p1 = \"\"\n        p2 = \"\"\n        prev = None\n        while l1:\n            nxt = l1.next\n            l1.next = prev\n            prev = l1\n            l1 = nxt",
+        "detail": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist1",
+        "kind": 5,
+        "importPath": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "description": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "peekOfCode": "linkedlist1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nlinkedlist2 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().addTwoNumbers(linkedlist1, linkedlist2))",
+        "detail": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist2",
+        "kind": 5,
+        "importPath": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "description": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "peekOfCode": "linkedlist2 = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))\nprint(Solution().addTwoNumbers(linkedlist1, linkedlist2))",
+        "detail": "linked_list.meduim.2_Add_Two_Numbers.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "ListNode",
+        "kind": 6,
+        "importPath": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "description": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "peekOfCode": "class ListNode(object):\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n    def __str__(self) -> str:\n        res = str(self.val)\n        if self.next:\n            res += \"->\" + str(self.next)\n        return res\nclass Solution(object):",
+        "detail": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "description": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "peekOfCode": "class Solution(object):\n    def splitListToParts(self, head, k):\n        length = 0\n        cur = head\n        dummy = head\n        node = dummy\n        while cur:\n            cur = cur.next\n            length+=1\n        res = []",
+        "detail": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "linkedlist2",
+        "kind": 5,
+        "importPath": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "description": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
+        "peekOfCode": "linkedlist2 = ListNode(1, ListNode(2, ListNode(3)))\nprint(Solution().splitListToParts(linkedlist2, 5))",
+        "detail": "linked_list.meduim.725_Split_Linked_List_in_Parts.Solution",
         "documentation": {}
     },
     {
@@ -494,6 +1133,15 @@
     {
         "label": "Solution",
         "kind": 6,
+        "importPath": "sliding_window.hard.239_Sliding_Window_Maximum.Solution",
+        "description": "sliding_window.hard.239_Sliding_Window_Maximum.Solution",
+        "peekOfCode": "class Solution(object):\n    def maxSlidingWindow(self, nums, k):\n        res = []\n        q = collections.deque()\n        l = 0\n        for r in range(len(nums)):\n            print(r)\n            #remove all smaller values at the end of the dequeue\n            while q and nums[r] > nums[q[-1]]:\n                q.pop()",
+        "detail": "sliding_window.hard.239_Sliding_Window_Maximum.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
         "importPath": "sliding_window.hard.76_Minimum_Window_Substring.Solution",
         "description": "sliding_window.hard.76_Minimum_Window_Substring.Solution",
         "peekOfCode": "class Solution(object):\n    def minWindow(self, s, t):\n        if t == \"\":\n            return \"\"\n        return -1\nprint(Solution().minWindow(\"bbaa\", \"aba\"))",
@@ -618,12 +1266,912 @@
         "documentation": {}
     },
     {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def isSameTree(self, p, q):\n        if not p and not q:\n            return True\n        if not p or not q or (p.val != q.val):\n            return False\n        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)\np = [1,2,3,4]\nq = [1,2,3]\n# Create TreeNode variables",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "p",
+        "kind": 5,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "p = [1,2,3,4]\nq = [1,2,3]\n# Create TreeNode variables\np_tree = TreeNode.build_tree(p, 0)\nq_tree = TreeNode.build_tree(q, 0)\n# Invert the binary tree\nsameTree = Solution().isSameTree(p_tree, q_tree)\nprint(sameTree)",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "q",
+        "kind": 5,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "q = [1,2,3]\n# Create TreeNode variables\np_tree = TreeNode.build_tree(p, 0)\nq_tree = TreeNode.build_tree(q, 0)\n# Invert the binary tree\nsameTree = Solution().isSameTree(p_tree, q_tree)\nprint(sameTree)",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "p_tree",
+        "kind": 5,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "p_tree = TreeNode.build_tree(p, 0)\nq_tree = TreeNode.build_tree(q, 0)\n# Invert the binary tree\nsameTree = Solution().isSameTree(p_tree, q_tree)\nprint(sameTree)",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "q_tree",
+        "kind": 5,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "q_tree = TreeNode.build_tree(q, 0)\n# Invert the binary tree\nsameTree = Solution().isSameTree(p_tree, q_tree)\nprint(sameTree)",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.easy.100_Same_Tree.Solution",
+        "description": "trees.easy.100_Same_Tree.Solution",
+        "peekOfCode": "sameTree = Solution().isSameTree(p_tree, q_tree)\nprint(sameTree)",
+        "detail": "trees.easy.100_Same_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def pretty_print(self, level=0):\n        prefix = '    ' * level\n        print(prefix, self.val)",
+        "detail": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def maxDepth(self, root):\n        return 0 if not root else 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))\n# Create the binary tree with the values [4,2,7,1,3,6,9]\nroot = TreeNode(4)\nroot.left = TreeNode(2)\nroot.right = TreeNode(7)\nroot.left.left = TreeNode(1)\nroot.left.right = TreeNode(3)\nroot.right.left = TreeNode(6)",
+        "detail": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "root = TreeNode(4)\nroot.left = TreeNode(2)\nroot.right = TreeNode(7)\nroot.left.left = TreeNode(1)\nroot.left.right = TreeNode(3)\nroot.right.left = TreeNode(6)\nroot.right.right = TreeNode(9)\n# Invert the binary tree\nmaxDepth = Solution().maxDepth(root)\nprint(maxDepth)",
+        "detail": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left",
+        "kind": 5,
+        "importPath": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "root.left = TreeNode(2)\nroot.right = TreeNode(7)\nroot.left.left = TreeNode(1)\nroot.left.right = TreeNode(3)\nroot.right.left = TreeNode(6)\nroot.right.right = TreeNode(9)\n# Invert the binary tree\nmaxDepth = Solution().maxDepth(root)\nprint(maxDepth)",
+        "detail": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.right",
+        "kind": 5,
+        "importPath": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "root.right = TreeNode(7)\nroot.left.left = TreeNode(1)\nroot.left.right = TreeNode(3)\nroot.right.left = TreeNode(6)\nroot.right.right = TreeNode(9)\n# Invert the binary tree\nmaxDepth = Solution().maxDepth(root)\nprint(maxDepth)",
+        "detail": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left.left",
+        "kind": 5,
+        "importPath": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "root.left.left = TreeNode(1)\nroot.left.right = TreeNode(3)\nroot.right.left = TreeNode(6)\nroot.right.right = TreeNode(9)\n# Invert the binary tree\nmaxDepth = Solution().maxDepth(root)\nprint(maxDepth)",
+        "detail": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left.right",
+        "kind": 5,
+        "importPath": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "root.left.right = TreeNode(3)\nroot.right.left = TreeNode(6)\nroot.right.right = TreeNode(9)\n# Invert the binary tree\nmaxDepth = Solution().maxDepth(root)\nprint(maxDepth)",
+        "detail": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.right.left",
+        "kind": 5,
+        "importPath": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "root.right.left = TreeNode(6)\nroot.right.right = TreeNode(9)\n# Invert the binary tree\nmaxDepth = Solution().maxDepth(root)\nprint(maxDepth)",
+        "detail": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.right.right",
+        "kind": 5,
+        "importPath": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "root.right.right = TreeNode(9)\n# Invert the binary tree\nmaxDepth = Solution().maxDepth(root)\nprint(maxDepth)",
+        "detail": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "maxDepth",
+        "kind": 5,
+        "importPath": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "maxDepth = Solution().maxDepth(root)\nprint(maxDepth)",
+        "detail": "trees.easy.104_Maximum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def pretty_print(self, level=0):\n        prefix = '    ' * level\n        print(prefix, self.val)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution2",
+        "kind": 6,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "class Solution2(object):\n    def isBalanced(self, root):\n        if not root:\n            return True\n        l = self.height(root.left)\n        r = self.height(root.right)\n        d = abs(l - r)\n        return d <= 1 and self.isBalanced(root.left) and self.isBalanced(root.right)\n    def height(self, root):\n        if not root:",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def isBalanced(self, root: Optional[TreeNode]) -> bool:\n        def explore(root):\n            if not root:\n                return [True, 0]\n            l = explore(root.left)\n            r = explore(root.right)\n            return [(l[0] and r[0] and (abs(l[1] - r[1]) <= 1)), 1 + max(l[1], r[1])] \n        return explore(root)[0]\n# Create the tree nodes",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root = TreeNode(1)\nroot.left = TreeNode(2)\nroot.right = TreeNode(2)\nroot.left.left = TreeNode(3)\nroot.right.right = TreeNode(3)\nroot.left.left.left = TreeNode(4)\nroot.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root.left = TreeNode(2)\nroot.right = TreeNode(2)\nroot.left.left = TreeNode(3)\nroot.right.right = TreeNode(3)\nroot.left.left.left = TreeNode(4)\nroot.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.right",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root.right = TreeNode(2)\nroot.left.left = TreeNode(3)\nroot.right.right = TreeNode(3)\nroot.left.left.left = TreeNode(4)\nroot.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left.left",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root.left.left = TreeNode(3)\nroot.right.right = TreeNode(3)\nroot.left.left.left = TreeNode(4)\nroot.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.right.right",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root.right.right = TreeNode(3)\nroot.left.left.left = TreeNode(4)\nroot.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left.left.left",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root.left.left.left = TreeNode(4)\nroot.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.right.right.right",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "root.right.right.right = TreeNode(4)\n# Invert the binary tree\ntree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "tree",
+        "kind": 5,
+        "importPath": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "description": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "peekOfCode": "tree = Solution().isBalanced(root)\nprint(tree)",
+        "detail": "trees.easy.110_Balanced_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def minDepth(self, root):\n        if not root:\n            return 0\n        self.depth = float('inf')\n        def dfs(node, curDepth):\n            if not node:\n                return\n            if not node.left and not node.right:\n                self.depth = min(self.depth, curDepth + 1)",
+        "detail": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([2,None,3,None,4,None,5,None,6])\nsameTree = Solution().minDepth(root)\nprint(sameTree)",
+        "detail": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "description": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "peekOfCode": "sameTree = Solution().minDepth(root)\nprint(sameTree)",
+        "detail": "trees.easy.111_Minimum_Depth_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.easy.145_Binary_Tree_Postorder_Traversal.Solution",
+        "description": "trees.easy.145_Binary_Tree_Postorder_Traversal.Solution",
+        "peekOfCode": "class Solution(object):\n    def postorderTraversal(self, root):\n        arr = []\n        def dfs(node):\n            if node:\n                dfs(node.left)\n                dfs(node.right)\n                arr.append(node.val)\n        dfs(root)\n        return arr",
+        "detail": "trees.easy.145_Binary_Tree_Postorder_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "description": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def pretty_print(self, level=0):\n        prefix = '    ' * level\n        print(prefix, self.val)",
+        "detail": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "description": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def invertTree(self, root):\n        if root == None:\n            return None\n        root.left, root.right = root.right, root.left\n        self.invertTree(root.right)\n        self.invertTree(root.left)\n        return root\n# Create the binary tree with the values [4,2,7,1,3,6,9]\nroot = TreeNode(4)",
+        "detail": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "description": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "peekOfCode": "root = TreeNode(4)\nroot.left = TreeNode(2)\nroot.right = TreeNode(7)\nroot.left.left = TreeNode(1)\nroot.left.right = TreeNode(3)\nroot.right.left = TreeNode(6)\nroot.right.right = TreeNode(9)\n# Invert the binary tree\ninverted_root = Solution().invertTree(root)\n# Print the inverted tree",
+        "detail": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left",
+        "kind": 5,
+        "importPath": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "description": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "peekOfCode": "root.left = TreeNode(2)\nroot.right = TreeNode(7)\nroot.left.left = TreeNode(1)\nroot.left.right = TreeNode(3)\nroot.right.left = TreeNode(6)\nroot.right.right = TreeNode(9)\n# Invert the binary tree\ninverted_root = Solution().invertTree(root)\n# Print the inverted tree\ninverted_root.pretty_print()",
+        "detail": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.right",
+        "kind": 5,
+        "importPath": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "description": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "peekOfCode": "root.right = TreeNode(7)\nroot.left.left = TreeNode(1)\nroot.left.right = TreeNode(3)\nroot.right.left = TreeNode(6)\nroot.right.right = TreeNode(9)\n# Invert the binary tree\ninverted_root = Solution().invertTree(root)\n# Print the inverted tree\ninverted_root.pretty_print()",
+        "detail": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left.left",
+        "kind": 5,
+        "importPath": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "description": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "peekOfCode": "root.left.left = TreeNode(1)\nroot.left.right = TreeNode(3)\nroot.right.left = TreeNode(6)\nroot.right.right = TreeNode(9)\n# Invert the binary tree\ninverted_root = Solution().invertTree(root)\n# Print the inverted tree\ninverted_root.pretty_print()",
+        "detail": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left.right",
+        "kind": 5,
+        "importPath": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "description": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "peekOfCode": "root.left.right = TreeNode(3)\nroot.right.left = TreeNode(6)\nroot.right.right = TreeNode(9)\n# Invert the binary tree\ninverted_root = Solution().invertTree(root)\n# Print the inverted tree\ninverted_root.pretty_print()",
+        "detail": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.right.left",
+        "kind": 5,
+        "importPath": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "description": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "peekOfCode": "root.right.left = TreeNode(6)\nroot.right.right = TreeNode(9)\n# Invert the binary tree\ninverted_root = Solution().invertTree(root)\n# Print the inverted tree\ninverted_root.pretty_print()",
+        "detail": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.right.right",
+        "kind": 5,
+        "importPath": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "description": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "peekOfCode": "root.right.right = TreeNode(9)\n# Invert the binary tree\ninverted_root = Solution().invertTree(root)\n# Print the inverted tree\ninverted_root.pretty_print()",
+        "detail": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "inverted_root",
+        "kind": 5,
+        "importPath": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "description": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "peekOfCode": "inverted_root = Solution().invertTree(root)\n# Print the inverted tree\ninverted_root.pretty_print()",
+        "detail": "trees.easy.226_Invert_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "description": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def pretty_print(self, level=0):\n        prefix = '    ' * level\n        print(prefix, self.val)",
+        "detail": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "description": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def __init__(self) -> None:\n        self.res = 0\n    def diameterOfBinaryTree(self, root):      \n        res = 0\n        def dfs(root):\n            if not root:\n                return -1\n            leftHeight = dfs(root.left)\n            rightHeight = dfs(root.right)",
+        "detail": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "description": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "peekOfCode": "root = TreeNode(1)\nroot.left = TreeNode(2)\nroot.right = TreeNode(3)\nroot.left.left = TreeNode(4)\nroot.left.right = TreeNode(5)\n# Invert the binary tree\nres = Solution().diameterOfBinaryTree(root)\nprint(res)",
+        "detail": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left",
+        "kind": 5,
+        "importPath": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "description": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "peekOfCode": "root.left = TreeNode(2)\nroot.right = TreeNode(3)\nroot.left.left = TreeNode(4)\nroot.left.right = TreeNode(5)\n# Invert the binary tree\nres = Solution().diameterOfBinaryTree(root)\nprint(res)",
+        "detail": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.right",
+        "kind": 5,
+        "importPath": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "description": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "peekOfCode": "root.right = TreeNode(3)\nroot.left.left = TreeNode(4)\nroot.left.right = TreeNode(5)\n# Invert the binary tree\nres = Solution().diameterOfBinaryTree(root)\nprint(res)",
+        "detail": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left.left",
+        "kind": 5,
+        "importPath": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "description": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "peekOfCode": "root.left.left = TreeNode(4)\nroot.left.right = TreeNode(5)\n# Invert the binary tree\nres = Solution().diameterOfBinaryTree(root)\nprint(res)",
+        "detail": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root.left.right",
+        "kind": 5,
+        "importPath": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "description": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "peekOfCode": "root.left.right = TreeNode(5)\n# Invert the binary tree\nres = Solution().diameterOfBinaryTree(root)\nprint(res)",
+        "detail": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "res",
+        "kind": 5,
+        "importPath": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "description": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "peekOfCode": "res = Solution().diameterOfBinaryTree(root)\nprint(res)",
+        "detail": "trees.easy.543_Diameter_of_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "description": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "description": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def isSubtree(self, root, subRoot):\n        if not root:\n            return False\n        if self.isSameTree(root, subRoot):\n            return True\n        return self.isSubtree(root.right, subRoot) or self.isSubtree(root.left, subRoot)\n    def isSameTree(self, root, root2):\n        if not root and not root2:\n            return True",
+        "detail": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "description": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([3,4,5,1,2])\nsubRoot = TreeNode.build_tree([4,1,2])\nsameTree = Solution().isSubtree(root, subRoot)\nprint(sameTree)",
+        "detail": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "subRoot",
+        "kind": 5,
+        "importPath": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "description": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "peekOfCode": "subRoot = TreeNode.build_tree([4,1,2])\nsameTree = Solution().isSubtree(root, subRoot)\nprint(sameTree)",
+        "detail": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "description": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "peekOfCode": "sameTree = Solution().isSubtree(root, subRoot)\nprint(sameTree)",
+        "detail": "trees.easy.572_Subtree_of_Another_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.hard.124_Binary_Tree_Maximum_Path_Sum.Solution",
+        "description": "trees.hard.124_Binary_Tree_Maximum_Path_Sum.Solution",
+        "peekOfCode": "class Solution(object):\n    def maxPathSum(self, root):\n        res = [root.val]\n        def dfs(node):\n            if not node:\n                return 0\n            maxLeft = max(0, dfs(node.left))\n            maxRight = max(0, dfs(node.right))\n            #calculate max with split\n            route = node.val + maxLeft + maxRight",
+        "detail": "trees.hard.124_Binary_Tree_Maximum_Path_Sum.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "description": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "description": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def serialize(self, root):\n        res = []\n        def dfs(node):\n            if not node:\n                res.append(\"N\")\n                return\n            res.append(str(node.val))\n            dfs(node.left)\n            dfs(node.right)",
+        "detail": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "null",
+        "kind": 5,
+        "importPath": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "description": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "peekOfCode": "null = None\nroot = TreeNode.build_tree([1, 2, 3, 4, 5])\nsameTree = Solution().serialize(root)\ndeserializedTree = Solution().deserialize(sameTree)\nprint(deserializedTree)\nprint(root)",
+        "detail": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "description": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([1, 2, 3, 4, 5])\nsameTree = Solution().serialize(root)\ndeserializedTree = Solution().deserialize(sameTree)\nprint(deserializedTree)\nprint(root)",
+        "detail": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "description": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "peekOfCode": "sameTree = Solution().serialize(root)\ndeserializedTree = Solution().deserialize(sameTree)\nprint(deserializedTree)\nprint(root)",
+        "detail": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "deserializedTree",
+        "kind": 5,
+        "importPath": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "description": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "peekOfCode": "deserializedTree = Solution().deserialize(sameTree)\nprint(deserializedTree)\nprint(root)",
+        "detail": "trees.hard.297_Serialize_and_Deserialize_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "description": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "description": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "peekOfCode": "class Solution(object):\n    def levelOrder(self, root):\n        q = collections.deque()\n        res = []\n        q.append(root)\n        while q:\n            length = len(q)\n            level = []\n            for i in range(length):\n                cur = q.popleft()",
+        "detail": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "description": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([1, 2, 3, 4, 5])\nsameTree = Solution().levelOrder(root)\nprint(sameTree)",
+        "detail": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "description": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "peekOfCode": "sameTree = Solution().levelOrder(root)\nprint(sameTree)",
+        "detail": "trees.meduim.102_Binary_Tree_Level_Order_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "description": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "description": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "peekOfCode": "class Solution(object):\n    def buildTree(self, preorder, inorder):\n        if not preorder or not inorder:\n            return None\n        #the first value in the preorder array is always going to be the head of the tree\n        root = TreeNode(preorder[0])\n        #find the index of the root in the in order array, we do this because all values to the left of the root\n        #will be in the left subtree, and all values in the right of root will be in the right subtree\n        #that's how inorder traversal works, left < node > right\n        mid = inorder.index(preorder[0])",
+        "detail": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "null",
+        "kind": 5,
+        "importPath": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "description": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "peekOfCode": "null = None\nsameTree = Solution().buildTree([3,9,20,15,7], [9,3,15,20,7])\nprint(sameTree)",
+        "detail": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "description": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "peekOfCode": "sameTree = Solution().buildTree([3,9,20,15,7], [9,3,15,20,7])\nprint(sameTree)",
+        "detail": "trees.meduim.105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "description": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "description": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def goodNodes(self, root):\n        #explore all paths, passing in the current max val for each exploration\n        def dfs(node, maxVal):\n            #if the node is none, then return 0 as an empty node cannot have any good nodes\n            if not node:\n                return 0\n            #start counting the number of good nodes starting from this node\n            #we start with 1 if the current node is a good node\n            goodNodes = 1 if node.val >= maxVal else 0",
+        "detail": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "description": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([3,1,4,3,None,1,5])\nsameTree = Solution().goodNodes(root)\nprint(sameTree)",
+        "detail": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "description": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "peekOfCode": "sameTree = Solution().goodNodes(root)\nprint(sameTree)",
+        "detail": "trees.meduim.1448_Count_Good_Nodes_in_Binary_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "description": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "description": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "peekOfCode": "class Solution(object):\n    def rightSideView(self, root):\n        res = []\n        queue = collections.deque()\n        queue.append(root)\n        level = 1\n        while queue:\n            length = len(queue)\n            last = 0\n            for i in range(length):",
+        "detail": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "description": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([1,2,3,4])\nsameTree = Solution().rightSideView(root)\nprint(sameTree)",
+        "detail": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "description": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "peekOfCode": "sameTree = Solution().rightSideView(root)\nprint(sameTree)",
+        "detail": "trees.meduim.199_Binary_Tree_Right_Side_View.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "description": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "description": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "peekOfCode": "class Solution(object):\n    def kthSmallest(self, root, k):\n        stack = []\n        cur = root\n        nth = 0\n        while cur or stack:\n            #go as far left as possible\n            while cur:\n                stack.append(cur)\n                cur = cur.left",
+        "detail": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "null",
+        "kind": 5,
+        "importPath": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "description": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "peekOfCode": "null = None\nroot = TreeNode.build_tree([3,1,4,None,2])\nsameTree = Solution().kthSmallest(root, 3)\nprint(sameTree)",
+        "detail": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "description": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([3,1,4,None,2])\nsameTree = Solution().kthSmallest(root, 3)\nprint(sameTree)",
+        "detail": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "description": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "peekOfCode": "sameTree = Solution().kthSmallest(root, 3)\nprint(sameTree)",
+        "detail": "trees.meduim.230_Kth_Smallest_Element_in_a_BST.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "description": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "description": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def lowestCommonAncestor(self, root, p, q):\n        cur = root\n        while cur:\n            if p.val < cur.val and q.val < cur.val:\n                cur = cur.left\n            elif p.val > cur.val and q.val > cur.val:\n                cur = cur.right\n            else:\n                return cur",
+        "detail": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "description": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([6,2,8,0,4,7,9,None,None,3,5])\nsameTree = Solution().lowestCommonAncestor(root, 2, 8)",
+        "detail": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "description": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "peekOfCode": "sameTree = Solution().lowestCommonAncestor(root, 2, 8)",
+        "detail": "trees.meduim.235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "description": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "description": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "peekOfCode": "class Solution(object):\n    def isValidBST(self, root):\n        def isValid(node, lower, upper):\n            #check if the node is empty, empty nodes are balanced BST\n            if not node:\n                return True\n            #check if the node is within the boundries it's allowed to be in\n            if not (node.val > lower and node.val < upper):\n                return False\n            #recursively check all it's children updating the boundries as we go",
+        "detail": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "null",
+        "kind": 5,
+        "importPath": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "description": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "peekOfCode": "null = None\nroot = TreeNode.build_tree([5,4,6,null,null,3,7])\nsameTree = Solution().isValidBST(root)\nprint(sameTree)",
+        "detail": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "description": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "peekOfCode": "root = TreeNode.build_tree([5,4,6,null,null,3,7])\nsameTree = Solution().isValidBST(root)\nprint(sameTree)",
+        "detail": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "description": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "peekOfCode": "sameTree = Solution().isValidBST(root)\nprint(sameTree)",
+        "detail": "trees.meduim.98_Validate_Binary_Search_Tree.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "TreeNode",
+        "kind": 6,
+        "importPath": "trees.boilerplate",
+        "description": "trees.boilerplate",
+        "peekOfCode": "class TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n    def __repr__(self):\n        return str(self.val)\n    def __str__(self):\n        output = []\n        self.pretty_print(output, 0)",
+        "detail": "trees.boilerplate",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "trees.boilerplate",
+        "description": "trees.boilerplate",
+        "peekOfCode": "class Solution(object):\n    def someMethod(self, root):\n        print(root)\n        return False\nnull = None\nroot = TreeNode.build_tree([1, 2, 3, 4, 5])\nsameTree = Solution().someMethod(root)\nprint(sameTree)",
+        "detail": "trees.boilerplate",
+        "documentation": {}
+    },
+    {
+        "label": "null",
+        "kind": 5,
+        "importPath": "trees.boilerplate",
+        "description": "trees.boilerplate",
+        "peekOfCode": "null = None\nroot = TreeNode.build_tree([1, 2, 3, 4, 5])\nsameTree = Solution().someMethod(root)\nprint(sameTree)",
+        "detail": "trees.boilerplate",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "trees.boilerplate",
+        "description": "trees.boilerplate",
+        "peekOfCode": "root = TreeNode.build_tree([1, 2, 3, 4, 5])\nsameTree = Solution().someMethod(root)\nprint(sameTree)",
+        "detail": "trees.boilerplate",
+        "documentation": {}
+    },
+    {
+        "label": "sameTree",
+        "kind": 5,
+        "importPath": "trees.boilerplate",
+        "description": "trees.boilerplate",
+        "peekOfCode": "sameTree = Solution().someMethod(root)\nprint(sameTree)",
+        "detail": "trees.boilerplate",
+        "documentation": {}
+    },
+    {
         "label": "Solution",
         "kind": 6,
         "importPath": "two_pointers.easy.125_Valid_Palindrome.Solution",
         "description": "two_pointers.easy.125_Valid_Palindrome.Solution",
         "peekOfCode": "class Solution(object):\n    def isPalindrome(self, s):\n        text = s.lower()\n        length = len(text) \n        leftPointer = 0\n        rightPointer = length - 1\n        while leftPointer < rightPointer:\n            while (leftPointer < rightPointer) and not (text[leftPointer].isdigit() or text[leftPointer].isalpha()):\n                leftPointer += 1\n            while (leftPointer < rightPointer) and not (text[rightPointer].isdigit() or text[rightPointer].isalpha()):",
         "detail": "two_pointers.easy.125_Valid_Palindrome.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "two_pointers.easy.1984_Minimum_Difference_Between_Highest_and_Lowest_of_K_Scores.Solution",
+        "description": "two_pointers.easy.1984_Minimum_Difference_Between_Highest_and_Lowest_of_K_Scores.Solution",
+        "peekOfCode": "class Solution(object):\n    def minimumDifference(self, nums, k):\n        arr = sorted(nums)\n        l, r = 0, k - 1\n        diff = arr[len(arr) - 1] - arr[0]\n        while r < len(arr):\n            cur = arr[r] - arr[l]\n            print(cur)\n            diff = min(diff, cur)\n            r+=1",
+        "detail": "two_pointers.easy.1984_Minimum_Difference_Between_Highest_and_Lowest_of_K_Scores.Solution",
+        "documentation": {}
+    },
+    {
+        "label": "Solution",
+        "kind": 6,
+        "importPath": "two_pointers.easy.680_Valid_Palindrome_II.Solution",
+        "description": "two_pointers.easy.680_Valid_Palindrome_II.Solution",
+        "peekOfCode": "class Solution(object):\n    def validPalindrome(self, s):\n        l, r = 0, len(s) - 1\n        while l <= r:\n            if(s[l] != s[r]):\n                str1 = s[:l] + s[l+1:]\n                str2 = s[:r] + s[r+1:]\n                return str1 == str1[::-1] or str2 == str2[::-1]\n            l += 1\n            r -= 1",
+        "detail": "two_pointers.easy.680_Valid_Palindrome_II.Solution",
         "documentation": {}
     },
     {
